@@ -1,3 +1,15 @@
 .tech-stack {
-  
+  .slick-list {
+    margin: 20px 0!important;
+  }
+  &-logos {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
 }

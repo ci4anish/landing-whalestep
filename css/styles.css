@@ -1,3 +1,67 @@
+.review {
+  display: flex;
+  padding: 70px 0;
+}
+
+.review-item {
+  display: flex;
+}
+
+.review .half-width {
+  width: 50%;
+}
+
+.review-title {
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.review-desc {
+  margin-bottom: 20px;
+}
+
+.review_response {
+  background-color: #f2fcfe;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.review_response p {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.review_response_user {
+  display: flex;
+  align-items: center;
+}
+
+.review_response_user-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.review_response_user-name {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.tech-stack .slick-list {
+  margin: 20px 0 !important;
+}
+
+.tech-stack-logos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-stack-logos div img {
+  margin: 0 auto;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;

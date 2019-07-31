@@ -1,0 +1,47 @@
+.review {
+  display: flex;
+  padding: 70px 0;
+  &-item {
+    display: flex;
+  }
+  .half-width {
+    width: 50%;
+  }
+
+  &-title {
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
+  &-desc {
+    margin-bottom: 20px
+  }
+
+  &_response {
+    background-color: #f2fcfe;
+    border-radius: 10px;
+    padding: 20px;
+
+    p {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    &_user {
+      display: flex;
+      align-items: center;
+
+      &-img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+      }
+
+      &-name {
+        font-weight: 700;
+        margin-right: 6px;
+      }
+    }
+  }
+}
