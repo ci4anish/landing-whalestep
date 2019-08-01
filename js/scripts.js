@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.tech-stack-logos').slick({
         infinite: true,
-        slidesToShow: 8,
+        slidesToShow: 7,
         slidesToScroll: 1
     });
 });

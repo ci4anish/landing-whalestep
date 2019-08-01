@@ -1,13 +1,9 @@
 .review {
   display: flex;
-  padding: 70px 0;
   &-item {
     display: flex;
+    padding: 60px 0;
   }
-  .half-width {
-    width: 50%;
-  }
-
   &-title {
     margin-bottom: 18px;
     font-weight: 700;
