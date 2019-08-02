@@ -4,6 +4,10 @@
   padding: 0 30px;
 }
 
+section {
+  margin-bottom: 60px;
+}
+
 .header .container,
 .text-block .container {
   width: 100%;
@@ -37,18 +41,19 @@
   &.right-bg {
     position: relative;
     background-repeat: no-repeat;
+    padding: 0;
   }
   &.left-bg {
     background-image: url('/img/left-decor.png');
     background-position-x: left;
+    left: -30px;
   }
   &.right-bg {
     background-image: url('/img/right-decor.png');
     background-position-x: right;
+    right: -30px;
   }
 }
-
-
 
 a {
   text-decoration: none;
@@ -59,3 +64,22 @@ ul {
   margin: 0;
   list-style: none;
 }
+*:focus {
+  outline: none;
+}
+
+form {
+  .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  textarea,
+  input {
+    border: none;
+  }
+  input {
+    border-bottom: 1px solid #cccccc;
+  }
+}
+
