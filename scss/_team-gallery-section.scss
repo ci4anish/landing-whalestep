@@ -1,0 +1,33 @@
+.tgl{ //team-gallery
+
+  &_content {
+    max-height: 500px;
+    overflow: hidden;
+    padding-top: 40px;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &_left {
+      width: 75%;
+
+      .row {
+        display: flex;
+
+        &:last-child {
+          .tgl_content_left-item {
+            width: 50%;
+          }
+        }
+      }
+    }
+    &-right {
+      width: 25%;
+
+    }
+  }
+}

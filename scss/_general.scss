@@ -1,58 +1,18 @@
+body {
+  margin: 0;
+}
+section {
+  margin-bottom: 50px;
+}
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 30px;
-}
-
-section {
-  margin-bottom: 60px;
+  padding: 0 15px;
 }
 
 .header .container,
 .text-block .container {
   width: 100%;
-}
-
-.blue-button {
-  text-transform: uppercase;
-  border: 0;
-  font-size: 14px;
-  border-radius: 50px;
-  color: white;
-  padding: 13px 30px;
-  background-color: rgb(46, 193, 224);
-  box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.32);
-  transition: .3s;
-
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    cursor: pointer;
-    color: rgb(46, 193, 224);
-    background-color: #ffffff;
-    box-shadow: 0 0 1px 1px rgb(46, 193, 224);
-  }
-}
-
-.half-width {
-  width: 50%;
-  &.left-bg,
-  &.right-bg {
-    position: relative;
-    background-repeat: no-repeat;
-    padding: 0;
-  }
-  &.left-bg {
-    background-image: url('/img/left-decor.png');
-    background-position-x: left;
-    left: -30px;
-  }
-  &.right-bg {
-    background-image: url('/img/right-decor.png');
-    background-position-x: right;
-    right: -30px;
-  }
 }
 
 a {
@@ -68,18 +28,78 @@ ul {
   outline: none;
 }
 
-form {
-  .title {
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 16px;
+.big-screen {
+  display: none;
+}
+
+.small-screen {
+  display: block;
+  height: 600px;
+}
+
+.blue-button {
+  text-transform: uppercase;
+  border: 0;
+  font-size: 12px;
+  border-radius: 50px;
+  color: white;
+  padding: 13px 30px;
+  background-color: rgb(46, 193, 224);
+  box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.32);
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: rgb(46, 193, 224);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1px 1px rgb(46, 193, 224)!important;
   }
-  textarea,
-  input {
-    border: none;
+}
+
+.half-width {
+  width: 100%;
+}
+
+.block-header {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #b0b1b1;
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: #e1e1e1;
+  margin: 0 0 0 15px;
+  color: #b0b1b1;
+
+}
+
+@media only screen and (min-width: 768px)  {
+  .line {
+    width: 80px;
   }
-  input {
-    border-bottom: 1px solid #cccccc;
+  .big-screen {
+    display: block;
+    height: 700px;
+  }
+  .small-screen {
+    display: none;
+  }
+  .section {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1170px) {
+  .container {
+    padding: 0 30px;
+  }
+  .half-width {
+    width: 50%;
   }
 }
 

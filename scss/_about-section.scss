@@ -1,0 +1,84 @@
+.abt { //about
+  font-size: 14px;
+  &-title {
+    padding-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  &_team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-item {
+      background-repeat: no-repeat;
+      width: 150px;
+      position: relative;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        text-align: center;
+
+        span {
+          font-weight: 700;
+          margin-right: 10px;
+        }
+
+      }
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .abt {
+    font-size: 16px;
+    &-text {
+      margin-bottom: 40px;
+    }
+    &_team {
+      &-item {
+        background-image: url("/img/assets/team-photo-decor.png");
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    .top-right-decor {
+      background-position-x: right;
+    }
+
+    .bottom-left-decor {
+      background-position-y: bottom;
+    }
+
+    .bottom-right-decor {
+      background-position-y: 70%;
+      background-position-x: right;
+    }
+
+    .top-right-decor-low {
+      background-position-y: 30%;
+      background-position-x: right;
+    }
+  }
+}
+@media (min-width: 1170px) {
+  .abt {
+    &_team {
+      &-item {
+        width: 250px;
+      }
+    }
+  }
+}

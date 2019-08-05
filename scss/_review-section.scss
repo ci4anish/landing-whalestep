@@ -1,43 +1,64 @@
 .review {
   display: flex;
   margin-bottom: 40px;
-
   &-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 50px;
+
+    &:last-child{
+      flex-direction: column-reverse;
+    }
+
+    .left-bg,
+    .right-bg {
+      position: relative;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin-bottom: 20px;
+      height: 320px;
+    }
 
     .left-bg {
-      height: 560px;
+      background-image: url('/img/left-decor-xs.png');
+      background-position-x: left;
+      left: -30px;
 
-      img:first-child {
-        position: absolute;
-        z-index: 2;
-        left: 50px;
-      }
-
-      img:nth-child(2) {
-        position: absolute;
-        z-index: 5;
-        left: 0;
-        animation: 3s infinite alternate left-anim;
+      img {
+        &:first-child {
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          left: 50px;
+          width: 280px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          position: absolute;
+          z-index: 5;
+        }
+        &:nth-child(2) {
+          left: 20px;
+          width: 85px;
+          animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-anim;
+        }
+        &:nth-child(3) {
+          left: 170px;
+          width: 130px;
+          animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate right-anim;
+        }
       }
 
       @keyframes left-anim {
         from {
-          bottom: 8%;
+          bottom: 0%;
         }
         to {
           bottom: 20%;
         }
       }
 
-
-      img:nth-child(3) {
-        position: absolute;
-        z-index: 5;
-        right: 10px;
-        animation: 3s infinite alternate right-anim;
-      }
 
       @keyframes right-anim {
         from {
@@ -50,43 +71,51 @@
     }
 
     .right-bg {
-      height: 675px;
-      img:first-child {
-        position: absolute;
-        z-index: 2;
-        bottom: 20%;
-        right: 15%;
-      }
+      background-image: url('/img/right-decor-xs.png');
+      background-position-x: right;
+      right: -30px;
 
-      img:nth-child(2) {
-        position: absolute;
-        z-index: 5;
-        left: 8%;
-        animation: 3s infinite alternate second-left-anim;
+      img {
+        &:first-child {
+          width: 200px;
+          position: absolute;
+          z-index: 2;
+          bottom: 20%;
+          right: 15%;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          position: absolute;
+          z-index: 5;
+          width: 120px;
+        }
+
+        &:nth-child(2) {
+          right: 180px;
+          animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate second-left-anim;
+        }
+        &:nth-child(3) {
+          right: 10px;
+          animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate second-right-anim;
+        }
       }
 
       @keyframes second-left-anim {
         from {
-          bottom: 26%;
-        }
-        to {
           bottom: 35%;
         }
-      }
-
-      img:nth-child(3) {
-        position: absolute;
-        z-index: 5;
-        right: 6%;
-        animation: 3s infinite alternate second-right-anim;
+        to {
+          bottom: 26%;
+        }
       }
 
       @keyframes second-right-anim {
         from {
-          bottom: 22%;
+          bottom: 10%;
         }
         to {
-          bottom: 10%;
+          bottom: 22%;
         }
       }
     }
@@ -95,27 +124,31 @@
   &-title {
     margin-bottom: 18px;
     font-weight: 700;
+    font-size: 16px;
   }
 
   &-desc {
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-size: 16px;
   }
 
   &_response {
     background-color: #f2fcfe;
     border-radius: 10px;
     padding: 20px;
+    font-size: 14px;
 
     p {
       font-style: italic;
       margin-bottom: 20px;
+      color: #7d7e7f;
     }
 
     &_user {
       display: flex;
       align-items: center;
 
-      &-img {
+      .user-img {
         border-radius: 50%;
         overflow: hidden;
         width: 40px;
@@ -123,9 +156,88 @@
         margin-right: 12px;
       }
 
-      &-name {
-        font-weight: 700;
-        margin-right: 6px;
+      .user_desc {
+        display: flex;
+        flex-wrap: wrap;
+        &-name {
+          font-weight: 700;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .review {
+    &-item {
+      .left-bg {
+        height: 570px;
+      }
+      .right-bg {
+        height: 670px;
+        img {
+          &:nth-child(2) {
+            width: 200px;
+            right: 340px;
+          }
+          &:nth-child(3) {
+            width: 200px;
+            right: 50px;
+          }
+        }
+      }
+      .left-bg{
+        background-image: url('/img/left-decor.png');
+        img {
+          &:first-child {
+            width: 490px;
+          }
+          &:nth-child(2) {
+            width: 120px;
+          }
+          &:nth-child(3) {
+            width: 300px;
+          }
+        }
+      }
+      .right-bg{
+        background-image: url('/img/right-decor.png');
+        img {
+          &:first-child {
+            width: 330px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1170px) {
+  .review {
+    &-item {
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+      &:last-child {
+        flex-direction: row;
+      }
+
+      .left-bg,
+      .right-bg {
+        margin-bottom: 0;
+      }
+      .left-bg {
+        height: 560px;
+
+        img {
+          &:nth-child(2) {
+            left: 0;
+          }
+          &:nth-child(3) {
+            right: 10px;
+          }
+        }
       }
     }
   }

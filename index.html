@@ -14,52 +14,62 @@
 </head>
 <body>
 
-<div class="header static">
-    <div class="container">
-        <div class="links">
-            <img class="logo" src="img/assets/whale-logo.png" alt="">
-            <span class="header-link">About</span>
-            <span class="header-link">Projects</span>
-            <span class="header-link">Contact</span>
+<header class="hdr">
+    <div class="hdr-wrapper">
+        <div class="hdr-left">
+            <div class="hdr-logo">
+                <img class="logo" src="img/assets/whale-logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+        <button class="blue-button" id="openHdrPopup">Get in touch</button>
     </div>
-
-    <!--<button class="blue-button">Get in touch</button>-->
-</div>
+</header>
 
 <div class="top-container">
     <img class="top-block-background big-screen" src="img/assets/bg-image.png" alt="">
     <img class="top-block-background small-screen" src="img/assets/bg-image-high.png" alt="">
     <div class="text-block">
         <div class="container">
-            <h1 class="top-container-header">Team of young and ambitious <span class="grey">JavaScript experts</span>
+            <h1 class="top-container-header">Team of young and ambitious <span >JavaScript experts</span>
             </h1>
-            <button class="blue-button">Get in touch</button>
+            <button class="blue-button" id="openTopPopup">Get in touch</button>
         </div>
     </div>
-    <img class="top-block-devices" src="img/assets/top-block-devices.png" alt="">
-    <form action="">
-        <div class="title">Get in touch</div>
-        <div class="posttitle">Leave your contact details and
-            we will respond as soon as possible
-        </div>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-    </form>
+    <img class="top-block-devices-lg" src="img/assets/top-block-devices.png" alt="">
+    <img class="top-block-devices-md" src="img/assets/top-block-devices-md.png" alt="">
+    <img class="top-block-devices-xs" src="img/assets/top-block-devices-xs.png" alt="">
+    <div class="top-popup mfp-hide">
+        <form action="" id="top-form">
+            <div class="title">Get in touch</div>
+            <div class="posttitle">Leave your contact details and
+                we will respond as soon as possible
+            </div>
+            <input type="text" placeholder="Your Full Name">
+            <input type="text" placeholder="Your Email">
+            <div class="blue-button">Send</div>
+            <img src="/img/assets/team-photo-decor.png" alt="">
+        </form>
+    </div>
 </div>
 
-<section class="about">
+<section class="about abt" id="about">
     <div class="container">
-        <div class="block-header grey">
+        <div class="block-header">
             About us
             <div class="line"></div>
         </div>
-
-        <div class="block-sub-header">
+        <div class="abt-title">
             Client success driven team of the Javascript full-stack developers located in Lviv, Ukraine.
         </div>
 
-        <div class="block-text">
+        <div class="abt-text">
             We share a passion for Agile approach in work with our clients and JavaScript technologies stack in various
             fields - Front End, Back End, Graphics, etc.<br><br>
 
@@ -71,61 +81,55 @@
             However, our background of work in various enterprise and startups orientated companies gives us flexibility
             and vision how to integrate to your management infrastructure, or build one from the scratch.
         </div>
-    </div>
-</section>
-
-<section class="team">
-    <div class="container photos-container">
-        <div class="photo-container bottom-right-decor">
-            <div class="team-mate-photo">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
-                <img src="img/assets/photo-example.png" alt="">
+        <div class="abt_team">
+            <div class="abt_team-item bottom-right-decor">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="photo-container top-right-decor">
-            <div class="team-mate-photo">
-                <img src="img/assets/photo-example.png" alt="">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
+            <div class="abt_team-item top-right-decor">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="photo-container bottom-left-decor">
-            <div class="team-mate-photo">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
-                <img src="img/assets/photo-example.png" alt="">
+            <div class="abt_team-item bottom-left-decor">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="container photos-container">
-        <div class="photo-container">
-            <div class="team-mate-photo">
-                <img src="img/assets/photo-example.png" alt="">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
+            <div class="abt_team-item">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="photo-container top-right-decor-low">
-            <div class="team-mate-photo">
-                <img src="img/assets/photo-example.png" alt="">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
-
+            <div class="abt_team-item top-right-decor-low">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="photo-container bottom-left-decor">
-            <div class="team-mate-photo">
-                <div class="title"><span class="name">Taras</span>Teach Lead</div>
-                <img src="img/assets/photo-example.png" alt="">
+            <div class="abt_team-item bottom-left-decor">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
+            </div>
+            <div class="abt_team-item top-right-decor">
+                <div class="title"><span>Taras</span>Teach Lead</div>
+                <div class="img">
+                    <img src="img/assets/photo-example.png" alt="">
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 <section class="tech-stack">
     <div class="container">
-        <div class="block-header grey">
+        <div class="block-header">
             We are experts in
             <div class="line"></div>
         </div>
@@ -145,10 +149,10 @@
         </div>
     </div>
 </section>
-<section class="review">
+<section class="review" id="projects">
     <div class="container">
         <div class="review-item">
-            <div class="half-width left-bg">
+            <div class="left-bg half-width">
                 <img src="/img/left-decor-laptop.png" alt="">
                 <img src="/img/left-decor-left-anim.png" alt="">
                 <img src="/img/left-decor-right-anim.png" alt="">
@@ -163,21 +167,21 @@
                     future projects.
                 </div>
                 <div class="review_response">
-                    <div class="review_response">
-                        <p>
-                            We are different from common freelancers teams who are working apart in the way that we work
-                            in
-                            the same office and have 2+ years of experience working together as a team. During that time
-                            we
-                            established a great level of communication and performance which can not be achieved in the
-                            short time span.
-                        </p>
-                        <div class="review_response_user">
-                            <div class="review_response_user-img">
-                                <img src="" alt="user-portrait">
-                            </div>
-                            <div class="review_response_user-name">Robert Topmson</div>
-                            <div class="review_response_user-pos">CEO of Tech Magic Company</div>
+                    <p>
+                        We are different from common freelancers teams who are working apart in the way that we work
+                        in
+                        the same office and have 2+ years of experience working together as a team. During that time
+                        we
+                        established a great level of communication and performance which can not be achieved in the
+                        short time span.
+                    </p>
+                    <div class="review_response_user">
+                        <div class="user-img">
+                            <img src="" alt="user-portrait">
+                        </div>
+                        <div class="user_desc">
+                            <div class="user_desc-name">Robert Topmson</div>
+                            <div class="user_desc-pos">CEO of Tech Magic Company</div>
                         </div>
                     </div>
                 </div>
@@ -213,15 +217,17 @@
 
                     </p>
                     <div class="review_response_user">
-                        <div class="review_response_user-img">
+                        <div class="user-img">
                             <img src="" alt="user-portrait">
                         </div>
-                        <div class="review_response_user-name">Calum Coburn</div>
-                        <div class="review_response_user-pos">CEO of Tech Magic Company</div>
+                        <div class="user_desc">
+                            <div class="user_desc-name">Calum Coburn</div>
+                            <div class="user_desc-pos">CEO of Tech Magic Company</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="half-width right-bg">
+            <div class="right-bg half-width">
                 <img src="/img/right-decor-laptop.png" alt="">
                 <img src="/img/right-decor-left-anim.png" alt="">
                 <img src="/img/right-decor-right-anim.png" alt="">
@@ -229,80 +235,72 @@
         </div>
     </div>
 </section>
-<section class="people section">
+<section class="team-gallery tgl">
     <div class="container">
-        <div class="block-header grey">
+        <div class="block-header">
             WhaleStep people
             <div class="line"></div>
         </div>
     </div>
+    <div class="tgl_content">
+        <div class="tgl_content_left">
+            <div class="row">
+                <div class="tgl_content_left-item"></div>
+                <div class="tgl_content_left-item"></div>
+                <div class="tgl_content_left-item"></div>
+            </div>
+            <div class="row">
+                <div class="tgl_content_left-item"></div>
+                <div class="tgl_content_left-item"></div>
+            </div>
+        </div>
+        <div class="tgl_content-right"></div>
+    </div>
 </section>
-<section class="contact"> <!--перейменувати в адресу і контакт форм зробити автономним-->
+<section class="address adr" id="contact">
     <div class="container">
-        <div class="block-header grey">
+        <div class="block-header">
             CONTACT US
             <div class="line"></div>
         </div>
-        <div class="contact-wrapper">
-            <div id="map" class="half-width">
+        <div class="adr_content">
+            <div id="map" class="adr_content-map half-width">
                 <iframe src="https://www.goog50"
                         frameborder="le.com/maps/embed?pb=!1m18!1m12!1m3!1d164705.55762681522!2d23.872152863506173!3d49.83260464310914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c09109a57%3A0x4223c517012378e2!2z0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1564585378525!5m2!1suk!2sua"
                         width="600" height="40" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="half-width">
-                <div class="contact-address">
+                <div class="adr_content-data">
                     <ul>
                         <li> 2 Vodohinna Street, Lviv, Ukraine</li>
                         <li><a href="tel:380966794109">+38 (096) 67 94 109</a></li>
                         <li><a href="mailto:whalestep@gmail.com">whalestep@gmail.com</a></li>
                     </ul>
-                </div>
-<!--                <div class="contact_form">-->
-<!--                    <div class="contact_form-title">-->
-<!--                        Do you have any questions?-->
-<!--                    </div>-->
-<!--                    <div class="contact_form-posttitle">-->
-<!--                        Leave your contact details and messages and we will respond as soon as possible-->
-<!--                    </div>-->
-<!--                    <form action="">-->
-<!--                        <div class="input-wrapper">-->
-<!--                            <input type="text" placeholder="Your Name">-->
-<!--                            <input type="text" placeholder="Your Email">-->
-<!--                        </div>-->
-<!--                        <textarea name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>-->
-<!--                        <div class="btn-wrapper">-->
-<!--                            <button class="blue-button">Send</button>-->
-<!--                            &lt;!&ndash;                      <input type="submit" class="blue-button">&ndash;&gt;-->
-
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
-                <div class="contact_form">
-                    <div class="contact_form-title">
-                        Do you have any questions?
-                    </div>
-                    <div class="contact_form-posttitle">
-                        Leave your contact details and messages and we will respond as soon as possible
-                    </div>
-                    <form action="">
+                    <form class="contact_form" id="bottom-form">
+                        <div class="title">
+                            Do you have any questions?
+                        </div>
+                        <div class="posttitle">
+                            Leave your contact details and messages and we will respond as soon as possible
+                        </div>
                         <div class="input-wrapper">
-                            <input type="text" placeholder="Your Name">
+                            <input type="text" placeholder="Your Full Name">
                             <input type="text" placeholder="Your Email">
                         </div>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>
                         <div class="btn-wrapper">
-                            <div class="blue-button" id="openPopup">Send</div>
-                            <!--                      <input type="submit" class="blue-button">-->
-
+                            <div class="blue-button" id="openBtmPopup">Send</div>
                         </div>
+                        <img src="/img/assets/team-photo-decor.png" alt="">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <div class="contact_popup mfp-hide">
-        <div class="contact_popup-content">
+    <div class="adr_popup mfp-hide">
+        <div class="adr_popup-content">
             <img src="/img/contact-popup-smile.png" alt="">
             <div><b>Thank You</b></div>
             <div>We will respond as soon as possible</div>
@@ -324,7 +322,6 @@
 
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscmMjqpXG1LHHF9z7abkZYgK3VzFHxuE"></script>-->
 
 <!--<script src="/assets/gmap3.js?body=1" type="text/javascript"></script>-->
 <script src="/js/magnific-popup.min.js" type="text/javascript"></script>
