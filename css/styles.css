@@ -1051,15 +1051,6 @@ ul {
   outline: none;
 }
 
-.big-screen {
-  display: none;
-}
-
-.small-screen {
-  display: block;
-  height: 600px;
-}
-
 .blue-button {
   text-transform: uppercase;
   border: 0;
@@ -1103,13 +1094,6 @@ ul {
 @media only screen and (min-width: 768px) {
   .line {
     width: 80px;
-  }
-  .big-screen {
-    display: block;
-    height: 700px;
-  }
-  .small-screen {
-    display: none;
   }
   .section {
     margin-bottom: 60px;
@@ -1228,12 +1212,14 @@ ul {
 
 .top-block-background {
   width: 100%;
+  height: 100%;
 }
 
 .top-container {
   /*background-image: url("assets/bg-image.png");*/
   /*padding: 300px 30px;*/
   background-size: cover;
+  height: 600px;
 }
 
 .top-container .text-block {
@@ -1256,7 +1242,34 @@ ul {
   color: #b0b1b1;
 }
 
+.big-screen {
+  display: none;
+}
+
+.small-screen {
+  display: block;
+}
+
+.mfp-content {
+  text-align: center;
+}
+
+.mfp-content .top-popup {
+  position: relative;
+  display: inline-block;
+}
+
+.mfp-content .top-popup form {
+  display: inline-block;
+}
+
 @media (min-width: 768px) {
+  .top-container {
+    height: 730px;
+  }
+  .top-container .text-block {
+    top: 150px;
+  }
   .top-block-devices-xs {
     display: none;
   }
@@ -1265,6 +1278,12 @@ ul {
     top: 90px;
     width: 60%;
     max-width: 450px;
+  }
+  .big-screen {
+    display: block;
+  }
+  .small-screen {
+    display: none;
   }
 }
 
@@ -1592,7 +1611,7 @@ ul {
     height: 570px;
   }
   .review-item .right-bg {
-    height: 670px;
+    height: 680px;
   }
   .review-item .right-bg img:nth-child(2) {
     width: 200px;

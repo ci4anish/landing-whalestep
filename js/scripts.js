@@ -53,6 +53,10 @@ $(document).ready(function () {
 
     });
 
+    $('.mpf-hide').magnificPopup({
+        closeBtnInside: false
+    });
+
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();
     })
@@ -84,19 +88,10 @@ function openBtmPopup() {
 
 function initMap() {
 
-    var marker = new google.maps.Marker({
-
-        // Определяем позицию маркера
-        position: {lat: 49.827607, lng: 24.044427},
-        map: map,
-        animation: google.maps.Animation.BOUNCE,
-
-        title: 'Whale Step',
-        icon: '../img/location-marker.png'
-    });
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 49.827607, lng: 24.044427},
         zoom: 10,
+        disableDefaultUI: true,
 
         styles: [
             {
@@ -258,5 +253,15 @@ function initMap() {
             }
         ]
 
+    });
+    var marker = new google.maps.Marker({
+
+        // Определяем позицию маркера
+        position: {lat: 49.827607, lng: 24.044427},
+        map: map,
+        animation: google.maps,
+
+        title: 'Whale Step',
+        icon: '../img/location-marker.png'
     });
 }

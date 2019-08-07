@@ -28,15 +28,6 @@ ul {
   outline: none;
 }
 
-.big-screen {
-  display: none;
-}
-
-.small-screen {
-  display: block;
-  height: 600px;
-}
-
 .blue-button {
   text-transform: uppercase;
   border: 0;
@@ -82,13 +73,6 @@ ul {
 @media only screen and (min-width: 768px)  {
   .line {
     width: 80px;
-  }
-  .big-screen {
-    display: block;
-    height: 700px;
-  }
-  .small-screen {
-    display: none;
   }
   .section {
     margin-bottom: 60px;
