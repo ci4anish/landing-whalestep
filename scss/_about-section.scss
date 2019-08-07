@@ -1,5 +1,8 @@
 .abt { //about
   font-size: 14px;
+  &-text {
+    margin-bottom: 20px;
+  }
   &-title {
     padding-top: 40px;
     margin-bottom: 20px;
@@ -9,14 +12,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 -15px;
 
     &-item {
       background-repeat: no-repeat;
       width: 150px;
       position: relative;
-      margin: 10px;
+      margin-bottom: 10px;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
 
       .title {
@@ -45,11 +49,12 @@
       margin-bottom: 40px;
     }
     &_team {
+      margin: 0;
       &-item {
         background-image: url("/img/assets/team-photo-decor.png");
-
+        margin: 10px;
         &:nth-child(even) {
-          flex-direction: column-reverse;
+          flex-direction: column;
         }
       }
     }

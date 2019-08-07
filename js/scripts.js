@@ -92,7 +92,7 @@ function initMap() {
         animation: google.maps.Animation.BOUNCE,
 
         title: 'Whale Step',
-        icon: './img/location-marker.png'
+        icon: '../img/location-marker.png'
     });
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 49.827607, lng: 24.044427},

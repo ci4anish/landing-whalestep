@@ -1292,6 +1292,10 @@ ul {
   font-size: 14px;
 }
 
+.abt-text {
+  margin-bottom: 20px;
+}
+
 .abt-title {
   padding-top: 40px;
   margin-bottom: 20px;
@@ -1302,15 +1306,16 @@ ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
 .abt_team-item {
   background-repeat: no-repeat;
   width: 150px;
   position: relative;
-  margin: 10px;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
@@ -1334,11 +1339,15 @@ ul {
   .abt-text {
     margin-bottom: 40px;
   }
+  .abt_team {
+    margin: 0;
+  }
   .abt_team-item {
     background-image: url("/img/assets/team-photo-decor.png");
+    margin: 10px;
   }
   .abt_team-item:nth-child(even) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .abt .top-right-decor {
     background-position-x: right;
@@ -1641,7 +1650,16 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  padding: 25px 0 100px;
+  padding-top: 25px;
+}
+
+.adr_content-map {
+  height: 450px;
+}
+
+.adr_content-map #map {
+  height: 100%;
+  width: 100%;
 }
 
 .adr_content iframe .gm-style-mtc > div,
@@ -1662,7 +1680,7 @@ ul {
   margin-right: -30px;
   font-size: 16px;
   width: 100%;
-  height: 390px;
+  height: 450px;
 }
 
 .adr_content-data ul li:not(:last-child) {
@@ -1700,8 +1718,15 @@ ul {
   margin-bottom: 16px;
 }
 
+@media (max-width: 767px) {
+  .adr {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .adr_content {
+    padding-bottom: 100px;
     flex-wrap: nowrap;
     flex-direction: row;
   }
@@ -1711,6 +1736,7 @@ ul {
   }
   .adr_content-data ul {
     width: 420px;
+    height: 390px;
   }
   .adr_popup {
     width: 580px;
