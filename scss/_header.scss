@@ -5,27 +5,46 @@
   top: 0;
   left: 0;
   right: 0;
-  animation-timing-function: linear;
-  animation-direction: normal;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
 
   .blue-button {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.32);
     display: none;
   }
 
+  &.sticky,
+  &.sticky-revert {
+
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  &.sticky-revert {
+    animation-name: hdr-anim-revert;
+  }
+
   &.sticky {
     animation-name: hdr-anim;
   }
+
   @keyframes hdr-anim {
     from {
       top: -100px;
-      background-color: rgba(255, 255,255, 0.01);
+      background-color: rgba(255, 255, 255, 0.01);
     }
     to {
       top: 0;
-      background-color: rgba(255, 255,255, 1);
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+  @keyframes hdr-anim-revert {
+    from {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    to {
+      top: 0;
+      background-color: transparent;
     }
   }
 
@@ -39,6 +58,7 @@
     display: flex;
     align-items: center;
   }
+
   &-logo {
     width: 50px;
 
@@ -52,8 +72,7 @@
     ul {
       display: flex;
 
-      li
-      {
+      li {
         &.active {
           color: #23c1e3;
         }
@@ -85,14 +104,17 @@
 @media (min-width: 768px) {
   .hdr {
     padding: 10px 30px;
+
     &-logo {
       width: 80px;
     }
+
     &.sticky {
       .blue-button {
         display: block;
       }
     }
+
     nav ul li a {
       font-size: 14px;
       margin-left: 60px;

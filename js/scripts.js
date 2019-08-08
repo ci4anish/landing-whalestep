@@ -12,11 +12,11 @@ $(document).ready(function () {
 
 
     $(window).scroll(function(){
-        if ($(window).scrollTop() >= 150) {
+        if ($(window).scrollTop() >= 300) {
             $('.hdr').addClass('sticky');
         }
         else {
-            $('.hdr').removeClass('sticky')
+            $('.hdr').removeClass('sticky').addClass('sticky-revert');
         }
     });
 
