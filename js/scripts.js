@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 
     $(window).scroll(function(){
-        if ($(window).scrollTop() >= 100) {
+        if ($(window).scrollTop() >= 150) {
             $('.hdr').addClass('sticky');
         }
         else {
@@ -53,9 +53,6 @@ $(document).ready(function () {
 
     });
 
-    $('.mpf-hide').magnificPopup({
-        closeBtnInside: false
-    });
 
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();

@@ -1119,13 +1119,11 @@ ul {
 
 .hdr {
   padding: 5px 15px;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   right: 0;
-  transform: translateZ(0);
-  transition: all 0.5s;
 }
 
 .hdr .blue-button {
@@ -1134,10 +1132,18 @@ ul {
 }
 
 .hdr.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
+  animation: hdr-anim .8s linear normal forwards 1;
+}
+
+@keyframes hdr-anim {
+  from {
+    top: -100px;
+    background-color: rgba(255, 255, 255, 0.01);
+  }
+  to {
+    top: 0;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0.01) 100%);
+  }
 }
 
 .hdr-wrapper {
@@ -1333,7 +1339,7 @@ ul {
 
 .abt_team-item {
   background-repeat: no-repeat;
-  width: 150px;
+  width: 50%;
   position: relative;
   margin-bottom: 20px;
   display: flex;
@@ -1367,7 +1373,8 @@ ul {
   }
   .abt_team-item {
     background-image: url("/img/assets/team-photo-decor.png");
-    margin: 10px;
+    margin: 30px 10px;
+    width: calc(33.333% - 20px);
   }
   .abt_team-item:nth-child(even) {
     flex-direction: column;
@@ -1389,6 +1396,9 @@ ul {
 }
 
 @media (min-width: 1170px) {
+  .abt_team {
+    justify-content: space-between;
+  }
   .abt_team-item {
     width: 250px;
   }
@@ -1598,6 +1608,11 @@ ul {
   width: 40px;
   height: 40px;
   margin-right: 12px;
+}
+
+.review_response_user .user-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .review_response_user .user_desc {
