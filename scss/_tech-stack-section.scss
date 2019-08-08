@@ -5,12 +5,14 @@
   &-logos {
     display: flex;
     div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       img {
         margin: 0 auto;
       }
     }
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+    height: 108px;
+    align-items: center;
   }
 }

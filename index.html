@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Whale Step</title>
+    <base href="/">
     <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
@@ -29,101 +30,100 @@
         <button class="blue-button" id="openHdrPopup">Get in touch</button>
     </div>
 </header>
-<div class="top-container">
-    <img class="top-block-background big-screen" src="img/assets/bg-image.png" alt="">
-<!--    <img class="top-block-background big-screen" src="img/team-lg-bg.jpg" alt="">-->
-    <img class="top-block-background small-screen" src="img/assets/bg-image-high.png" alt="">
-    <div class="text-block">
-        <div class="container">
-            <h1 class="top-container-header">Team of young and ambitious <span>JavaScript experts</span>
+<div class="first-screen fsc">
+    <img class="fsc_bg-lg" src="img/assets/bg-image.png" alt="">
+    <img class="fsc_bg-sm" src="img/assets/bg-image-high.png" alt="">
+    <div class="container">
+        <div class="fsc-content">
+            <h1>Team of young and ambitious <span>JavaScript experts</span>
             </h1>
             <button class="blue-button" id="openTopPopup">Get in touch</button>
         </div>
     </div>
-    <img class="top-block-devices-lg" src="img/assets/top-block-devices.png" alt="">
-    <img class="top-block-devices-md" src="img/assets/top-block-devices-md.png" alt="">
-    <img class="top-block-devices-xs" src="img/assets/top-block-devices-xs.png" alt="">
+    <img class="fsc_devices-lg" src="img/assets/top-block-devices.png" alt="">
+    <img class="fsc_devices-md" src="img/assets/top-block-devices-md.png" alt="">
+    <img class="fsc_devices-xs" src="img/assets/top-block-devices-xs.png" alt="">
     <div class="top-popup mfp-hide">
-        <form action="/send-email" method="post" id="top-form">
+        <form  action="/send-email" method="post" id="top-form">
             <div class="title">Get in touch</div>
             <div class="posttitle">Leave your contact details and
                 we will respond as soon as possible
             </div>
             <input type="text" placeholder="Your Full Name">
             <input type="text" placeholder="Your Email">
-            <button class="blue-button">Send</button>
-            <img src="/img/assets/team-photo-decor.png" alt="">
+            <input type="submit" class="blue-button" value="Send">
+            <img src="img/assets/team-photo-decor.png" alt="">
         </form>
     </div>
 </div>
-<section class="about abt" id="about">
-    <div class="container">
-        <div class="block-header">
-            About us
-            <div class="line"></div>
-        </div>
-        <div class="abt-title">
-            Client success driven team of the Javascript full-stack developers located in Lviv, Ukraine.
-        </div>
+<!--<section class="about abt" id="about">-->
+<!--    <div class="container">-->
+<!--        <div class="block-header">-->
+<!--            About us-->
+<!--            <div class="line"></div>-->
+<!--        </div>-->
+<!--        <div class="abt-title">-->
+<!--            Client success driven team of the Javascript full-stack developers located in Lviv, Ukraine.-->
+<!--        </div>-->
 
-        <div class="abt-text">
-            We share a passion for Agile approach in work with our clients and JavaScript technologies stack in various
-            fields - Front End, Back End, Graphics, etc.<br><br>
+<!--        <div class="abt-text">-->
+<!--            We share a passion for Agile approach in work with our clients and JavaScript technologies stack in various-->
+<!--            fields - Front End, Back End, Graphics, etc.<br><br>-->
 
-            We are different from common freelancers teams who are working apart in the way that we work in the same
-            office and have 2+ years of experience working together as a team. During that time we established a great
-            level of communication and performance which can not be achieved in the short time span. <br><br>
+<!--            We are different from common freelancers teams who are working apart in the way that we work in the same-->
+<!--            office and have 2+ years of experience working together as a team. During that time we established a great-->
+<!--            level of communication and performance which can not be achieved in the short time span. <br><br>-->
 
-            Also, we are not an agency, which means you don't pay for HR, Management and other unnecessary overheads.
-            However, our background of work in various enterprise and startups orientated companies gives us flexibility
-            and vision how to integrate to your management infrastructure, or build one from the scratch.
-        </div>
-        <div class="abt_team">
-            <div class="abt_team-item bottom-right-decor">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/taras-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item top-right-decor">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/pavlo-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item bottom-left-decor">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/mary2-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/dima-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item top-right-decor-low">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/andriko-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item bottom-left-decor">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/roma-min.png" alt="">
-                </div>
-            </div>
-            <div class="abt_team-item top-right-decor">
-                <div class="title"><span>Taras</span>Teach Lead</div>
-                <div class="img">
-                    <img src="img/team/andrij-bananovych-min.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--            Also, we are not an agency, which means you don't pay for HR, Management and other unnecessary overheads.-->
+<!--            However, our background of work in various enterprise and startups orientated companies gives us flexibility-->
+<!--            and vision how to integrate to your management infrastructure, or build one from the scratch.-->
+<!--        </div>-->
+<!--        <div class="abt_team">-->
+<!--            <div class="abt_team-item bottom-right-decor">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/taras-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item top-right-decor">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/pavlo-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item bottom-left-decor">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/mary2-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/dima-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item top-right-decor-low">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/andriko-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item bottom-left-decor">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/roma-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="abt_team-item top-right-decor">-->
+<!--                <div class="title"><span>Taras</span>Teach Lead</div>-->
+<!--                <div class="img">-->
+<!--                    <img src="img/team/andrij-bananovych-min.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 <section class="tech-stack">
     <div class="container">
         <div class="block-header">
@@ -131,17 +131,19 @@
             <div class="line"></div>
         </div>
         <div class="tech-stack-logos">
-            <div><img src="/img/slick-img.png" alt=""></div>
-            <div><img src="/img/slick-img2.png" alt=""></div>
-            <div><img src="/img/slick-img3.png" alt=""></div>
-            <div><img src="/img/slick-img4.png" alt=""></div>
-            <div><img src="/img/slick-img5.png" alt=""></div>
-            <div><img src="/img/slick-img6.png" alt=""></div>
-            <div><img src="/img/slick-img7.png" alt=""></div>
-            <div><img src="/img/slick-img8.png" alt=""></div>
-            <div><img src="/img/slick-img9.png" alt=""></div>
-            <div><img src="/img/slick-img10.png" alt=""></div>
-            <div><img src="/img/slick-img11.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img2.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img3.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img4.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img13.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img6.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img7.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img5.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img8.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img9.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img10.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img11.png" alt=""></div>
+            <div><img src="/img/slick-logos/slick-img12.png" alt=""></div>
         </div>
     </div>
 </section>
