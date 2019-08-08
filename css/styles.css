@@ -1132,7 +1132,11 @@ ul {
 }
 
 .hdr.sticky {
-  animation: hdr-anim .6s linear normal forwards 1;
+  animation-name: hdr-anim;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes hdr-anim {
