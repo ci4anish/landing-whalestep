@@ -23,7 +23,7 @@
     .left-bg {
       background-image: url('/img/left-decor-xs.png');
       background-position-x: left;
-      left: -30px;
+      left: -15px;
 
       img {
         &:first-child {
@@ -31,7 +31,7 @@
           z-index: 2;
           top: 30px;
           left: 50px;
-          width: 280px;
+          width: 250px;
         }
         &:nth-child(2),
         &:nth-child(3) {
@@ -73,7 +73,7 @@
     .right-bg {
       background-image: url('/img/right-decor-xs.png');
       background-position-x: right;
-      right: -30px;
+      right: -15px;
 
       img {
         &:first-child {
@@ -229,6 +229,7 @@
       }
       .left-bg {
         height: 560px;
+        left: -30px;
 
         img {
           &:nth-child(2) {
@@ -238,6 +239,9 @@
             right: 10px;
           }
         }
+      }
+      .right-bg {
+        right: -30px;
       }
     }
   }

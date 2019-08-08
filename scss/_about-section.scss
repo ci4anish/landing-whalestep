@@ -18,13 +18,14 @@
       background-repeat: no-repeat;
       width: 150px;
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
 
       .title {
         text-align: center;
+        margin: 15px 0;
 
         span {
           font-weight: 700;

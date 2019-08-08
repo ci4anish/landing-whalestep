@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap");
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("/fonts/GothamPro-Medium.eot");
+  src: local("Gotham Pro Medium"), local("GothamPro-Medium"), url("/fonts/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Medium.woff") format("woff"), url("/fonts/GothamPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -1116,6 +1124,8 @@ ul {
   top: 0;
   left: 0;
   right: 0;
+  transform: translateZ(0);
+  transition: all 0.5s;
 }
 
 .hdr .blue-button {
@@ -1162,6 +1172,7 @@ ul {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1216,9 +1227,6 @@ ul {
 }
 
 .top-container {
-  /*background-image: url("assets/bg-image.png");*/
-  /*padding: 300px 30px;*/
-  background-size: cover;
   height: 600px;
 }
 
@@ -1332,7 +1340,7 @@ ul {
   background-repeat: no-repeat;
   width: 150px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -1340,6 +1348,7 @@ ul {
 
 .abt_team-item .title {
   text-align: center;
+  margin: 15px 0;
 }
 
 .abt_team-item .title span {
@@ -1465,7 +1474,7 @@ ul {
 .review-item .left-bg {
   background-image: url("/img/left-decor-xs.png");
   background-position-x: left;
-  left: -30px;
+  left: -15px;
 }
 
 .review-item .left-bg img:first-child {
@@ -1473,7 +1482,7 @@ ul {
   z-index: 2;
   top: 30px;
   left: 50px;
-  width: 280px;
+  width: 250px;
 }
 
 .review-item .left-bg img:nth-child(2), .review-item .left-bg img:nth-child(3) {
@@ -1514,7 +1523,7 @@ ul {
 .review-item .right-bg {
   background-image: url("/img/right-decor-xs.png");
   background-position-x: right;
-  right: -30px;
+  right: -15px;
 }
 
 .review-item .right-bg img:first-child {
@@ -1656,12 +1665,16 @@ ul {
   }
   .review-item .left-bg {
     height: 560px;
+    left: -30px;
   }
   .review-item .left-bg img:nth-child(2) {
     left: 0;
   }
   .review-item .left-bg img:nth-child(3) {
     right: 10px;
+  }
+  .review-item .right-bg {
+    right: -30px;
   }
 }
 
@@ -1674,6 +1687,7 @@ ul {
 
 .adr_content-map {
   height: 450px;
+  margin: 0 -15px;
 }
 
 .adr_content-map #map {
@@ -1760,6 +1774,12 @@ ul {
   .adr_popup {
     width: 580px;
     height: 350px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .adr_content-data ul {
+    margin-right: -30px;
   }
 }
 

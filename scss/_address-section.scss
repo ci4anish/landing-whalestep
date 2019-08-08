@@ -7,6 +7,7 @@
 
     &-map {
       height: 450px;
+      margin: 0 -15px;
       #map {
         height: 100%;
         width: 100%;
@@ -102,6 +103,17 @@
     &_popup {
       width: 580px;
       height: 350px;
+    }
+  }
+}
+@media (min-width: 1170px) {
+  .adr {
+    &_content {
+      &-data {
+        ul {
+          margin-right: -30px;
+        }
+      }
     }
   }
 }
