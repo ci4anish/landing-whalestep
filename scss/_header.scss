@@ -5,6 +5,10 @@
   top: 0;
   left: 0;
   right: 0;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
 
   .blue-button {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.32);
@@ -13,10 +17,6 @@
 
   &.sticky {
     animation-name: hdr-anim;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
   }
   @keyframes hdr-anim {
     from {
