@@ -12,7 +12,7 @@
   }
 
   &.sticky {
-    animation: hdr-anim .8s linear normal forwards 1;
+    animation: hdr-anim .6s linear normal forwards 1;
   }
   @keyframes hdr-anim {
     from {
@@ -21,7 +21,7 @@
     }
     to {
       top: 0;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.9)80%,rgba(255, 255, 255, 0.01)100%);
+      background-color: rgba(255, 255,255, 1);
     }
   }
 

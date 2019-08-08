@@ -51,10 +51,11 @@
     }
     &_team {
       margin: 0;
+      justify-content: space-around;
       &-item {
         background-image: url("/img/assets/team-photo-decor.png");
         margin: 30px 10px;
-        width: calc(33.333% - 20px);
+        width: 40%;
         &:nth-child(even) {
           flex-direction: column;
         }
@@ -83,7 +84,6 @@
 @media (min-width: 1170px) {
   .abt {
     &_team {
-      justify-content: space-between;
       &-item {
         width: 250px;
       }
