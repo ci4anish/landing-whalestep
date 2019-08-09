@@ -57,7 +57,7 @@ $(document).ready(function () {
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();
     })
-    $('#openBtmPopup').on('click', function () {
+    $('#openBtmPopup, #hdrBtmPopup').on('click', function () {
         openBtmPopup();
     })
 
@@ -76,7 +76,7 @@ function openTopPopup() {
 function openBtmPopup() {
     $.magnificPopup.open({
         items: {
-            src: '.adr_popup'
+            src: '.rsp_popup'
         },
         type: 'inline'
     });
@@ -261,4 +261,12 @@ function initMap() {
         title: 'Whale Step',
         icon: '../img/location-marker.png'
     });
+}
+
+function formSend() {
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: document.getElementsByTagName("form")
+    })
 }

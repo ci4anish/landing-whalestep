@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,8 @@
     "connect": "^3.7.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "cors": "^2.8.5",
+    "gulp": "^4.0.2",
     "http": "0.0.0",
     "jquery": "^3.4.1",
     "nodemailer": "^6.3.0",
@@ -20,6 +22,8 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.19.1"
   }
 }

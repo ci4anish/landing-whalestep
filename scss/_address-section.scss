@@ -44,41 +44,7 @@
       }
     }
   }
-
-
-
-  &_popup {
-    box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.32);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background: #ffffff;
-    margin: 0 auto;
-
-    & > img {
-      position: absolute;
-      z-index: 5;
-      left: 0;
-      bottom: 0;
-    }
-
-    &.half-width {
-      padding: 90px 20px 150px;
-    }
-
-    &-content {
-      text-align: center;
-
-      img {
-        margin-bottom: 16px;
-      }
-    }
-  }
 }
-
 
 @media (max-width: 767px) {
   .adr {
@@ -99,10 +65,6 @@
           height: 390px;
         }
       }
-    }
-    &_popup {
-      width: 580px;
-      height: 350px;
     }
   }
 }

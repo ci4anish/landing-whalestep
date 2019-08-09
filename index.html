@@ -44,14 +44,14 @@
     <img class="fsc_devices-md" src="img/assets/top-block-devices-md.png" alt="">
     <img class="fsc_devices-xs" src="img/assets/top-block-devices-xs.png" alt="">
     <div class="top-popup mfp-hide">
-        <form  action="/send-email" method="post" id="top-form">
+        <form id="top-form">
             <div class="title">Get in touch</div>
             <div class="posttitle">Leave your contact details and
                 we will respond as soon as possible
             </div>
-            <input type="text" placeholder="Your Full Name">
-            <input type="text" placeholder="Your Email">
-            <input type="submit" class="blue-button" value="Send">
+            <input name="full name" type="text" placeholder="Your Full Name">
+            <input name="email" type="text" placeholder="Your Email">
+            <input id="hdrBtmPopup" type="submit" class="blue-button" value="Send">
             <img src="img/assets/team-photo-decor.png" alt="">
         </form>
     </div>
@@ -275,7 +275,7 @@
                         <li><a href="tel:380966794109">+38 (096) 67 94 109</a></li>
                         <li><a href="mailto:whalestep@gmail.com">whalestep@gmail.com</a></li>
                     </ul>
-                    <form action="/send-email" method="post" class="contact_form" id="bottom-form">
+                    <form class="contact_form" id="bottom-form">
                         <div class="title">
                             Do you have any questions?
                         </div>
@@ -283,8 +283,8 @@
                             Leave your contact details and messages and we will respond as soon as possible
                         </div>
                         <div class="input-wrapper">
-                            <input type="text" placeholder="Your Full Name">
-                            <input type="text" placeholder="Your Email">
+                            <input name="full name" type="text" placeholder="Your Full Name">
+                            <input name="email" type="text" placeholder="Your Email">
                         </div>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>
                         <div class="btn-wrapper">
@@ -296,14 +296,6 @@
             </div>
         </div>
     </div>
-    <div class="adr_popup mfp-hide">
-        <div class="adr_popup-content">
-            <img src="/img/contact-popup-smile.png" alt="">
-            <div><b>Thank You</b></div>
-            <div>We will respond as soon as possible</div>
-        </div>
-        <img src="/img/assets/team-photo-decor.png" alt="">
-    </div>
 </section>
 <footer class="ftr">
     <div class="ftr-logo">
@@ -313,6 +305,14 @@
         All rights reserved. 2019
     </div>
 </footer>
+<div class="rsp_popup mfp-hide">
+    <div class="rsp_popup-content">
+        <img src="/img/contact-popup-smile.png" alt="">
+        <div><b>Thank You</b></div>
+        <div>We will respond as soon as possible</div>
+    </div>
+    <img src="/img/assets/team-photo-decor.png" alt="">
+</div>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
 <!--<script src="/assets/gmap3.js?body=1" type="text/javascript"></script>-->
