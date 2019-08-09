@@ -70,16 +70,6 @@
 @media (min-width: 768px) {
   .fsc {
     min-height: 730px;
-    &_bg {
-      &-lg {
-        display: block;
-      }
-
-      &-sm {
-        display: none;
-      }
-    }
-
     &_devices {
       &-xs {
         display: none;

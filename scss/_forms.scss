@@ -29,6 +29,9 @@ form {
 
   .blue-button {
     max-width: 105px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   img {
