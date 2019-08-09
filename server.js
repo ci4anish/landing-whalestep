@@ -79,21 +79,21 @@ app.listen(port, function (err) {
 
 app.post('/send-email', async function (req, res) {
 
-    console.log();
+    let data = req.body;
     let transporter = nodeMailer.createTransport({
         service: "gmail",
         auth: {
             user: 'sheremeta.m@gmail.com',
-            pass: 'columbuspalumba'
+            pass: ''
         }
     });
 
     let mailOptions = {
-        from: req.body.to, // sender address
+        from: data.email, // sender address
         to: 'sheremeta.m@gmail.com', // list of receivers
         subject: req.body.subject, // Subject line
         text: req.body.body, // plain text body
-        html: '<b>NodeJS Email Tutorial</b>' // html body
+        html: `<b>${data.description}</b>` // html body
     };
 
     await transporter.sendMail(mailOptions, (error, info) => {
@@ -102,8 +102,7 @@ app.post('/send-email', async function (req, res) {
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
         // res.render('index');
-        return res.status(200);
-
+        res.json(info.response);
     });
 
 });

@@ -1,17 +1,18 @@
 .review {
-  display: flex;
+  //display: flex;
   margin-bottom: 40px;
 
+  &-bottom {
+    .review-item {
+      flex-direction: column-reverse;
+    }
+  }
 
   &-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 50px;
-
-    &:last-child {
-      flex-direction: column-reverse;
-    }
 
     .left-bg,
     .right-bg {
@@ -188,8 +189,12 @@
 
       .right-bg {
         height: 680px;
+        background-image: url('/img/right-decor.png');
 
         img {
+          &:first-child {
+            width: 330px;
+          }
           &:nth-child(2) {
             width: 200px;
             right: 340px;
@@ -219,34 +224,37 @@
           }
         }
       }
-
-      .right-bg {
-        background-image: url('/img/right-decor.png');
-
-        img {
-          &:first-child {
-            width: 330px;
-          }
-        }
-      }
     }
   }
 }
 
 @media (min-width: 1170px) {
   .review {
+    &-top {
+      background-position: left;
+      background-repeat: no-repeat;
+      background-image: url('/img/left-decor.png');
+    }
+
+    &-bottom {
+      background-position: right;
+      background-repeat: no-repeat;
+      background-image: url('/img/right-decor.png');
+      .review-item {
+        flex-direction: row;
+      }
+    }
+
     &-item {
       margin-bottom: 0;
       flex-wrap: nowrap;
       flex-direction: row;
 
-      &:last-child {
-        flex-direction: row;
-      }
 
       .left-bg,
       .right-bg {
         margin-bottom: 0;
+        background-image: none;
       }
 
       .left-bg {

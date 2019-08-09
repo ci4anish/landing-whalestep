@@ -57,8 +57,12 @@ $(document).ready(function () {
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();
     })
-    $('#openBtmPopup, #hdrBtmPopup').on('click', function () {
+    $('#openBtmPopup').on('click', function () {
         openBtmPopup();
+        sendBottomForm();
+    })
+    $('#hdrFormSend').on('click', function () {
+        sendTopForm();
     })
 
 
@@ -263,10 +267,31 @@ function initMap() {
     });
 }
 
-function formSend() {
+function sendTopForm() {
+    let data = $('#top-form').serializeArray();
+    let body = {};
+    data.forEach(item=>{
+        body[item.name] = item.value;
+    });
+    console.log(body);
     fetch('/send-email', {
         method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: document.getElementsByTagName("form")
-    })
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+    }).then(res=>{
+    });
+}
+function sendBottomForm() {
+    let data = $('#bottom-form').serializeArray();
+    let body = {};
+    data.forEach(item=>{
+        body[item.name] = item.value;
+    });
+    console.log(body);
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+    }).then(res=>{
+    });
 }
