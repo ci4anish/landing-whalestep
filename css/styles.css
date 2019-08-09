@@ -904,6 +904,8 @@ form {
     margin-bottom: 25px; }
   form .blue-button {
     max-width: 105px; }
+    form .blue-button:hover {
+      cursor: pointer; }
   form img {
     position: absolute;
     z-index: 5;
@@ -1080,35 +1082,31 @@ form {
     max-width: 280px; }
   .fsc_devices-md, .fsc_devices-lg {
     display: none; }
-  .fsc_bg-lg, .fsc_bg-sm {
+  .fsc_bg {
     width: 100%;
-    height: 100%;
+    height: 100%; }
+  .fsc_wrapper {
+    width: 100%;
     position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0; }
-  .fsc_bg-lg {
-    display: none; }
-  .fsc-content {
-    padding-top: 100px;
-    text-align: left;
-    max-width: 500px; }
-    .fsc-content h1 {
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      line-height: 1.3;
-      font-size: 24px; }
-      .fsc-content h1 span {
-        color: #b0b1b1; }
+    top: 100px;
+    left: 0;
+    right: 0; }
+    .fsc_wrapper-content {
+      max-width: 500px; }
+      .fsc_wrapper-content h1 {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        font-size: 24px; }
+        .fsc_wrapper-content h1 span {
+          color: #b0b1b1; }
 
-.mfp-content {
+.mfp-wrapper {
   text-align: center; }
-  .mfp-content .top-popup {
+  .mfp-wrapper .top-popup {
     position: relative;
     display: inline-block; }
-    .mfp-content .top-popup form {
+    .mfp-wrapper .top-popup form {
       display: inline-block; }
 
 @media (min-width: 768px) {
@@ -1125,13 +1123,13 @@ form {
       top: 90px;
       width: 60%;
       max-width: 450px; }
-    .fsc-content {
-      padding-top: 150px; } }
+    .fsc_wrapper {
+      top: 150px; } }
 
 @media (min-width: 1170px) {
-  .fsc-content {
-    padding-top: 220px; }
-    .fsc-content h1 {
+  .fsc_wrapper {
+    top: 220px; }
+    .fsc_wrapper h1 {
       font-size: 36px; }
   .fsc_devices-xs, .fsc_devices-md {
     display: none; }
