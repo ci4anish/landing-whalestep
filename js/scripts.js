@@ -61,9 +61,9 @@ $(document).ready(function () {
         openBtmPopup();
         sendBottomForm();
     })
-    $('#hdrFormSend').on('click', function () {
-        sendTopForm();
-    })
+    // $('#hdrFormSend').on('click', function () {
+    //     sendTopForm();
+    // })
 
 
 });
