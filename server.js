@@ -83,14 +83,14 @@ app.post('/send-email', async function (req, res) {
     let transporter = nodeMailer.createTransport({
         service: "gmail",
         auth: {
-            user: 'sheremeta.m@gmail.com',
+            user: 'ci4anish@gmail.com',
             pass: ''
         }
     });
 
     let mailOptions = {
         from: data.email, // sender address
-        to: 'sheremeta.m@gmail.com', // list of receivers
+        to: 'ci4anish@gmail.com', // list of receivers
         subject: req.body.subject, // Subject line
         text: req.body.body, // plain text body
         html: `<b>${data.description}</b>` // html body

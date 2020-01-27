@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    if($( window ).width() > 768) {
+        $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
+    } else {
+        $('.fsc_bg').attr('src', 'img/assets/bg-image-high.png');
+    }
+
     $('.hdr nav li').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active')
     });
@@ -12,7 +18,7 @@ $(document).ready(function () {
 
 
     $(window).scroll(function(){
-        if ($(window).scrollTop() >= 300) {
+        if ($(window).scrollTop() >= 50) {
             $('.hdr').addClass('sticky');
         }
         else {
@@ -56,14 +62,18 @@ $(document).ready(function () {
 
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();
-    })
-    $('#openBtmPopup').on('click', function () {
+    });
+    $('#openBtmPopup').on('click', function (e) {
         openBtmPopup();
         sendBottomForm();
-    })
-    // $('#hdrFormSend').on('click', function () {
-    //     sendTopForm();
-    // })
+        e.preventDefault();
+        e.stopPropagation();
+    });
+    $('#hdrFormSend').on('click', function (e) {
+        sendTopForm();
+        e.preventDefault();
+        e.stopPropagation();
+    });
 
 
 });
@@ -279,6 +289,7 @@ function sendTopForm() {
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(body)
     }).then(res=>{
+        console.log('dupa', res);
     });
 }
 function sendBottomForm() {
@@ -292,6 +303,7 @@ function sendBottomForm() {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(body)
-    }).then(res=>{
+    }).then(res=> {
+        console.log(res);
     });
 }
