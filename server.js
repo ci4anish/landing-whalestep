@@ -21,13 +21,14 @@ app.listen(port, function (err) {
 });
 
 app.post('/send-email', async function (req, res) {
+    const mainEmail = 'ci4anish@gmail.com';
 
     let data = req.body;
     const transporter = nodeMailer.createTransport({
         service: 'gmail',
         auth: {
             type: 'OAuth2',
-            user: 'ci4anish@gmail.com',
+            user: mainEmail,
             clientId: '121550933080-ajh7815vsmad01f47aelks1kbkd7lpva.apps.googleusercontent.com',
             clientSecret: 'Ge3BxKVuvYr7887zUFtk786D',
             refreshToken: '1//042BkrHXSaXbbCgYIARAAGAQSNwF-L9IrGSQjVZY3I8M7lMqFp8VXzXqtyP4vfODHWh1WwJ6DN4UlgFG0r-GiARMJ97_eucaA3Lk',
@@ -36,11 +37,12 @@ app.post('/send-email', async function (req, res) {
     });
 
     let mailOptions = {
-        from: data.email, // sender address
-        to: 'ci4anish@gmail.com', // list of receivers
+        from: data.full_name + ' ' + data.email, // sender address
+        to: mainEmail, // list of receivers
         subject: req.body.subject || 'Subject', // Subject line
-        text: req.body.body || 'Text', // plain text body
+        text: req.body.description || 'Text', // plain text body
         html: `<b>${data.description}</b>` // html body
+
     };
 
     await transporter.sendMail(mailOptions, (error, info) => {

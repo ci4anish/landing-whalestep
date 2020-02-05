@@ -280,10 +280,7 @@ function initMap() {
 function sendTopForm() {
     let data = $('#top-form').serializeArray();
     let body = {};
-    data.forEach(item=>{
-        body[item.name] = item.value;
-    });
-    console.log(body);
+    data.forEach(item=>body[item.name] = item.value);
     fetch('/send-email', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
@@ -295,10 +292,7 @@ function sendTopForm() {
 function sendBottomForm() {
     let data = $('#bottom-form').serializeArray();
     let body = {};
-    data.forEach(item=>{
-        body[item.name] = item.value;
-    });
-    console.log(body);
+    data.forEach(item=>body[item.name] = item.value);
     fetch('/send-email', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
