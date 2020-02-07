@@ -1,9 +1,11 @@
 body {
   margin: 0;
 }
+
 section {
   margin-bottom: 50px;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -16,35 +18,41 @@ section {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none!important;
   color: #000000;
 }
+
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 *:focus {
   outline: none;
 }
 
+*:hover {
+  cursor: pointer;
+}
+
 .blue-button {
-  text-transform: uppercase;
-  border: 0;
-  font-size: 12px;
-  border-radius: 50px;
-  color: white;
   padding: 13px 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  border: 0;
+  border-radius: 50px;
   background-color: rgb(46, 193, 224);
   box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.32);
   transition: .3s;
 
   &:hover,
   &:focus {
-    cursor: pointer;
     color: rgb(46, 193, 224);
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 1px 1px rgb(46, 193, 224)!important;
+    box-shadow: 0 0 1px 1px rgb(46, 193, 224) !important;
   }
 }
 
@@ -57,7 +65,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 14px;
+  font-size: $font-size-base;
   color: #b0b1b1;
 }
 
@@ -70,7 +78,7 @@ ul {
 
 }
 
-@media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px) {
   .line {
     width: 80px;
   }
@@ -78,6 +86,7 @@ ul {
     margin-bottom: 60px;
   }
 }
+
 @media (min-width: 1170px) {
   .container {
     padding: 0 30px;

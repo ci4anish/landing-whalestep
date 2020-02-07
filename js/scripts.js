@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    if($( window ).width() > 768) {
+    if ($(window).width() > 768) {
         $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
     } else {
         $('.fsc_bg').attr('src', 'img/assets/bg-image-high.png');
@@ -10,18 +10,17 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active')
     });
 
-    $('a[href^="#"]').on('click',function (){
+    $('a[href^="#"]').on('click', function () {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 20 - $('.hdr').innerHeight()
         }, 1000);
     });
 
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         if ($(window).scrollTop() >= 50) {
             $('.hdr').addClass('sticky');
-        }
-        else {
+        } else {
             $('.hdr').removeClass('sticky').addClass('sticky-revert');
         }
     });
@@ -76,8 +75,19 @@ $(document).ready(function () {
     });
 
 
-});
+    $('.caption').click(function (e) {
+        e.preventDefault();
+        let tab_id = $(this).attr('href');
 
+        $('.caption').removeClass('active');
+        $(this).addClass('active');
+
+        $('.cont').removeClass('active');
+        $("#" + tab_id).addClass('active');
+
+    });
+
+});
 
 function openTopPopup() {
     $.magnificPopup.open({
@@ -87,6 +97,7 @@ function openTopPopup() {
         type: 'inline'
     });
 }
+
 function openBtmPopup() {
     $.magnificPopup.open({
         items: {
@@ -280,24 +291,25 @@ function initMap() {
 function sendTopForm() {
     let data = $('#top-form').serializeArray();
     let body = {};
-    data.forEach(item=>body[item.name] = item.value);
+    data.forEach(item => body[item.name] = item.value);
     fetch('/send-email', {
         method: 'POST',
-        headers: {'Content-Type':'application/json'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body)
-    }).then(res=>{
+    }).then(res => {
         console.log('dupa', res);
     });
 }
+
 function sendBottomForm() {
     let data = $('#bottom-form').serializeArray();
     let body = {};
-    data.forEach(item=>body[item.name] = item.value);
+    data.forEach(item => body[item.name] = item.value);
     fetch('/send-email', {
         method: 'POST',
-        headers: {'Content-Type':'application/json'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body)
-    }).then(res=> {
+    }).then(res => {
         console.log(res);
     });
 }
