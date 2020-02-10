@@ -1230,7 +1230,8 @@ form {
     width: 25%; }
 
 .review {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  padding-top: 50px; }
   .review .tabs-captions {
     display: flex;
     justify-content: center;

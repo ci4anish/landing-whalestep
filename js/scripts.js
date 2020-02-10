@@ -74,19 +74,6 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-
-    $('.caption').click(function (e) {
-        e.preventDefault();
-        let tab_id = $(this).attr('href');
-
-        $('.caption').removeClass('active');
-        $(this).addClass('active');
-
-        $('.cont').removeClass('active');
-        $("#" + tab_id).addClass('active');
-
-    });
-
 });
 
 function openTopPopup() {
