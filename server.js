@@ -2,25 +2,33 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = 8008;
 
-const express = require('express'),
-    nodeMailer = require('nodemailer');
-
+const express = require('express');
 const app = express();
+const path = require('path');
+const router = express.Router();
+
+const nodeMailer = require('nodemailer');
+
 app.use(express.static(__dirname + ''));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(cors());
+app.use(express.static(path.join(__dirname, '')));
 
-app.get('/', function (req, res) {
-    res.render('index');
+router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.listen(port, function (err) {
-    if (err) throw err;
-    console.log('Server start on port 8008!');
+router.get('/projects',function(req,res){
+    res.sendFile(path.join(__dirname+'/projects.html'));
 });
 
-app.post('/send-email', async function (req, res) {
+app.use('/', router);
+app.listen(process.env.port || port);
+
+console.log(`Running at Port ${port}`);
+
+router.post('/send-email', async function (req, res) {
     const mainEmail = 'ci4anish@gmail.com';
 
     let data = req.body;

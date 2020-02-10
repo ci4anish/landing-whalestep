@@ -30,7 +30,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 2000,
         touchMove: true,
         arrows: false,
