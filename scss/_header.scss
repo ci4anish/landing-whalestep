@@ -6,6 +6,14 @@
   left: 0;
   right: 0;
 
+  &.projects {
+    background-color: white;
+
+    .blue-button {
+      display: block;
+    }
+  }
+
   .blue-button {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.32);
     display: none;

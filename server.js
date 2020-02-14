@@ -19,9 +19,14 @@ router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-router.get('/projects',function(req,res){
+router.get('/projects',function(req,res) {
     res.sendFile(path.join(__dirname+'/projects.html'));
 });
+// router.get('/about',function(req,res){
+//     res.redirect('');
+// });
+
+
 
 app.use('/', router);
 app.listen(process.env.port || port);

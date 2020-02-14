@@ -2,30 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <title>Whale Step</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
 </head>
 <body>
-<section class="review" id="projects">
-    <div class="tabs">
-        <div class="tabs-captions">
-            <a href="web" class="caption active">web</a>
-            <a href="mobile" class="caption">mobile</a>
+<header class="hdr projects">
+    <div class="hdr-wrapper">
+        <div class="hdr-left">
+            <a href="/" class="hdr-logo">
+                <img class="logo" src="img/assets/whale-logo.png" alt="">
+            </a>
+            <nav>
+                <ul>
+                    <li><a onclick="scrollRedirect(this.innerText)">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a onclick="scrollRedirect(this.innerText)">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="tabs-content">
-            <div id="web" class="cont active">
-                <div class="review-top">
-                    <div class="container">
-                        <div class="review-item">
+        <button class="blue-button" id="openHdrPopup">Get in touch</button>
+    </div>
+</header>
+<div class="fsc projects">
+    <div class="container">
+        <div class="fsc_wrapper-content">
+            <h1>Our projects</h1>
+            <p>We share a passion for Agile approach in work with our clients and Java Script technologies stack in
+                various
+                fields - Front End, Back End, Graphics, etc.</p>
+        </div>
+    </div>
+</div>
+<section class="prj" id="projects">
+    <div class="container">
+        <div class="tabs">
+            <div class="tabs-captions">
+                <a href="web" class="caption active">Web projects</a>
+                <a href="mobile" class="caption">Mobile projects</a>
+            </div>
+            <div class="tabs-content">
+                <div id="web" class="cont active">
+                    <div class="review-top">
+                        <div class="prj_item">
                             <div class="left-bg half-width">
-                                <img src="/img/left-decor-laptop.png" alt="">
-                                <img src="/img/left-decor-left-anim.png" alt="">
-                                <img src="/img/left-decor-right-anim.png" alt="">
+                                <img class="prj_item-img" src="/img/left-decor-laptop.png" alt="">
+                                <img class="prj_item-img" src="/img/left-decor-left-anim.png" alt="">
+                                <img class="prj_item-img" src="/img/left-decor-right-anim.png" alt="">
                             </div>
                             <div class="half-width">
-                                <div class="review-title">Hirescapes</div>
-                                <div class="review-desc">
+                                <div class="prj_item-title">Hirescapes</div>
+                                <div class="prj_item-desc">
                                     Hirescapes is the leading managed marketplace for Hardscaping services in North
                                     America.
                                     Everyday, we help home owners discover the best contractors for their hardscape
@@ -39,7 +66,8 @@
                                     <p>
                                         They were able to jump right into our project and help take the lead of the
                                         front end.
-                                        Taras, the team lead, was great with communication and did proper research on
+                                        Taras, the team lead, was great with communication and did proper research
+                                        on
                                         given tasks.
                                     </p>
                                     <p>
@@ -59,33 +87,35 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="mobile" class="cont">
-                <div class="review-bottom">
-                    <div class="container">
-                        <div class="review-item">
+                    <div class="review-bottom">
+                        <div class="prj_item">
                             <div class="half-width">
-                                <div class="review-title">PFA</div>
-                                <div class="review-desc">
-                                    PFA is software meant to gauge team's or company’s areas of negotiation strength and
+                                <div class="prj_item-title">PFA</div>
+                                <div class="prj_item-desc">
+                                    PFA is software meant to gauge team's or company’s areas of negotiation strength
+                                    and
                                     weakness.
                                     The
-                                    group of senior negotiators has put all their experience to give the company owner
+                                    group of senior negotiators has put all their experience to give the company
+                                    owner
                                     expert
                                     insight
-                                    into how his companies results compare to others in similar roles and industries.
+                                    into how his companies results compare to others in similar roles and
+                                    industries.
                                     Profile
                                     results
-                                    and our conversation are instrumental, giving an in-depth understanding of companies
+                                    and our conversation are instrumental, giving an in-depth understanding of
+                                    companies
                                     negotiation
                                     context, profiles, and needs.
                                 </div>
                                 <div class="review_response">
                                     <p>
-                                        Whale Step is a team of bright, driven young developers. They worked well on my
+                                        Whale Step is a team of bright, driven young developers. They worked well on
+                                        my
                                         product as
-                                        co-developers to my existing team and showed improvements in their communication
+                                        co-developers to my existing team and showed improvements in their
+                                        communication
                                         with them
                                         over
                                         the
@@ -93,7 +123,8 @@
                                         effectively.
                                     </p>
                                     <p>
-                                        They worked consistently until the project was completed and showed initiative
+                                        They worked consistently until the project was completed and showed
+                                        initiative
                                         by
                                         researching
                                         solutions and making suggestions.
@@ -103,7 +134,8 @@
                                         whole team
                                         wishes
                                         Whale
-                                        Step the best of success and hopefully, we will work together in the future on
+                                        Step the best of success and hopefully, we will work together in the future
+                                        on
                                         the next
                                         iterations
                                         of our product.
@@ -120,10 +152,363 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-bg half-width">
-                                <img src="/img/right-decor-laptop.png" alt="">
-                                <img src="/img/right-decor-left-anim.png" alt="">
-                                <img src="/img/right-decor-right-anim.png" alt="">
+                            <div class="half-width">
+                                <img class="prj_item-img" src="/img/prj2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/prj3.png" alt="">
+                        </div>
+                        <div class="half-width">
+                            <div class="prj_item-title">MoonMail</div>
+                            <div class="prj_item-desc">
+                                Hirescapes is the leading managed marketplace for Hardscaping services in North
+                                America.
+                                Everyday, we help home owners discover the best contractors for their hardscape
+                                projects while
+                                helping contractors find the best projects to grow their business.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    The Whale Step team was a pleasure to work with.
+                                </p>
+                                <p>
+                                    They were able to jump right into our project and help take the lead of the
+                                    front end.
+                                    Taras, the team lead, was great with communication and did proper research on
+                                    given tasks.
+                                </p>
+                                <p>
+                                    We would highly recommend Whale Step and will be working with them again on
+                                    future projects.
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-joe.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Joseph Masciovecchio</div>
+                                        <div class="user_desc-pos">CEO of Hirescapes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <div class="prj_item-title">PFA</div>
+                            <div class="prj_item-desc">
+                                PFA is software meant to gauge team's or company’s areas of negotiation strength and
+                                weakness.
+                                The
+                                group of senior negotiators has put all their experience to give the company owner
+                                expert
+                                insight
+                                into how his companies results compare to others in similar roles and industries.
+                                Profile
+                                results
+                                and our conversation are instrumental, giving an in-depth understanding of companies
+                                negotiation
+                                context, profiles, and needs.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    Whale Step is a team of bright, driven young developers. They worked well on my
+                                    product as
+                                    co-developers to my existing team and showed improvements in their communication
+                                    with them
+                                    over
+                                    the
+                                    months. They also could be relied upon to use our systems and processes
+                                    effectively.
+                                </p>
+                                <p>
+                                    They worked consistently until the project was completed and showed initiative
+                                    by
+                                    researching
+                                    solutions and making suggestions.
+                                </p>
+                                <p>
+                                    As it is, for now, they delivered quality code which will soon go live. The
+                                    whole team
+                                    wishes
+                                    Whale
+                                    Step the best of success and hopefully, we will work together in the future on
+                                    the next
+                                    iterations
+                                    of our product.
+
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-calum.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Calum Coburn</div>
+                                        <div class="user_desc-pos">CEO of Negotiation Experts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/prj4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/assets/right-side-bg.png" alt="">
+                            <img class="prj_item-img" src="/img/web-leftmac-anim.png" alt="">
+                            <img class="prj_item-img" src="/img/web-leftPage-anim.png" alt="">
+                            <img class="prj_item-img" src="/img/web-rightPage-anim.png" alt="">
+                        </div>
+                        <div class="half-width">
+                            <div class="prj_item-title">Hirescapes</div>
+                            <div class="prj_item-desc">
+                                Hirescapes is the leading managed marketplace for Hardscaping services in North
+                                America.
+                                Everyday, we help home owners discover the best contractors for their hardscape
+                                projects while
+                                helping contractors find the best projects to grow their business.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    The Whale Step team was a pleasure to work with.
+                                </p>
+                                <p>
+                                    They were able to jump right into our project and help take the lead of the
+                                    front end.
+                                    Taras, the team lead, was great with communication and did proper research on
+                                    given tasks.
+                                </p>
+                                <p>
+                                    We would highly recommend Whale Step and will be working with them again on
+                                    future projects.
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-joe.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Joseph Masciovecchio</div>
+                                        <div class="user_desc-pos">CEO of Hirescapes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <div class="prj_item-title">PFA</div>
+                            <div class="prj_item-desc">
+                                PFA is software meant to gauge team's or company’s areas of negotiation strength and
+                                weakness.
+                                The
+                                group of senior negotiators has put all their experience to give the company owner
+                                expert
+                                insight
+                                into how his companies results compare to others in similar roles and industries.
+                                Profile
+                                results
+                                and our conversation are instrumental, giving an in-depth understanding of companies
+                                negotiation
+                                context, profiles, and needs.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    Whale Step is a team of bright, driven young developers. They worked well on my
+                                    product as
+                                    co-developers to my existing team and showed improvements in their communication
+                                    with them
+                                    over
+                                    the
+                                    months. They also could be relied upon to use our systems and processes
+                                    effectively.
+                                </p>
+                                <p>
+                                    They worked consistently until the project was completed and showed initiative
+                                    by
+                                    researching
+                                    solutions and making suggestions.
+                                </p>
+                                <p>
+                                    As it is, for now, they delivered quality code which will soon go live. The
+                                    whole team
+                                    wishes
+                                    Whale
+                                    Step the best of success and hopefully, we will work together in the future on
+                                    the next
+                                    iterations
+                                    of our product.
+
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-calum.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Calum Coburn</div>
+                                        <div class="user_desc-pos">CEO of Negotiation Experts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/prj6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile" class="cont">
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/mob-prj1.png" alt="">
+                        </div>
+                        <div class="half-width">
+                            <div class="prj_item-title">Hirescapes</div>
+                            <div class="prj_item-desc">
+                                Hirescapes is the leading managed marketplace for Hardscaping services in North
+                                America.
+                                Everyday, we help home owners discover the best contractors for their hardscape
+                                projects while
+                                helping contractors find the best projects to grow their business.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    The Whale Step team was a pleasure to work with.
+                                </p>
+                                <p>
+                                    They were able to jump right into our project and help take the lead of the
+                                    front end.
+                                    Taras, the team lead, was great with communication and did proper research
+                                    on
+                                    given tasks.
+                                </p>
+                                <p>
+                                    We would highly recommend Whale Step and will be working with them again on
+                                    future projects.
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-joe.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Joseph Masciovecchio</div>
+                                        <div class="user_desc-pos">CEO of Hirescapes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prj_item mobile-anim">
+                        <div class="half-width">
+                            <div class="prj_item-title">PFA</div>
+                            <div class="prj_item-desc">
+                                PFA is software meant to gauge team's or company’s areas of negotiation strength
+                                and
+                                weakness.
+                                The
+                                group of senior negotiators has put all their experience to give the company
+                                owner
+                                expert
+                                insight
+                                into how his companies results compare to others in similar roles and
+                                industries.
+                                Profile
+                                results
+                                and our conversation are instrumental, giving an in-depth understanding of
+                                companies
+                                negotiation
+                                context, profiles, and needs.
+                            </div>
+                            <div class="review_response prj_item-response">
+                                <p>
+                                    Whale Step is a team of bright, driven young developers. They worked well on
+                                    my
+                                    product as
+                                    co-developers to my existing team and showed improvements in their
+                                    communication
+                                    with them
+                                    over
+                                    the
+                                    months. They also could be relied upon to use our systems and processes
+                                    effectively.
+                                </p>
+                                <p>
+                                    They worked consistently until the project was completed and showed
+                                    initiative
+                                    by
+                                    researching
+                                    solutions and making suggestions.
+                                </p>
+                                <p>
+                                    As it is, for now, they delivered quality code which will soon go live. The
+                                    whole team
+                                    wishes
+                                    Whale
+                                    Step the best of success and hopefully, we will work together in the future
+                                    on
+                                    the next
+                                    iterations
+                                    of our product.
+
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-calum.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Calum Coburn</div>
+                                        <div class="user_desc-pos">CEO of Negotiation Experts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/assets/right-side-bg.png" alt="">
+                            <img class="prj_item-img" src="/img/assets/top-phone.png" alt="">
+                            <img class="prj_item-img" src="/img/assets/left-phone.png" alt="">
+                            <img class="prj_item-img" src="/img/assets/right-phone.png" alt="">
+                            <img class="prj_item-img" src="/img/assets/btm-phone.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prj_item">
+                        <div class="half-width">
+                            <img class="prj_item-img" src="/img/mob-prj3.png" alt="">
+                        </div>
+                        <div class="half-width">
+                            <div class="prj_item-title">Hirescapes</div>
+                            <div class="prj_item-desc">
+                                Hirescapes is the leading managed marketplace for Hardscaping services in North
+                                America.
+                                Everyday, we help home owners discover the best contractors for their hardscape
+                                projects while
+                                helping contractors find the best projects to grow their business.
+                            </div>
+                            <div class="review_response">
+                                <p>
+                                    The Whale Step team was a pleasure to work with.
+                                </p>
+                                <p>
+                                    They were able to jump right into our project and help take the lead of the
+                                    front end.
+                                    Taras, the team lead, was great with communication and did proper research
+                                    on
+                                    given tasks.
+                                </p>
+                                <p>
+                                    We would highly recommend Whale Step and will be working with them again on
+                                    future projects.
+                                </p>
+                                <div class="review_response_user">
+                                    <div class="user-img">
+                                        <img src="./img/client-joe.jpg" alt="user-portrait">
+                                    </div>
+                                    <div class="user_desc">
+                                        <div class="user_desc-name">Joseph Masciovecchio</div>
+                                        <div class="user_desc-pos">CEO of Hirescapes</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,18 +518,6 @@
     </div>
 </section>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script>
-    $('.caption').click(function (e) {
-        e.preventDefault();
-        let tab_id = $(this).attr('href');
-
-        $('.caption').removeClass('active');
-        $(this).addClass('active');
-
-        $('.cont').removeClass('active');
-        $("#" + tab_id).addClass('active');
-
-    });
-</script>
+<script src="js/project.js"></script>
 </body>
 </html>

@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    if (window.location.href.includes('about') || window.location.href.includes('contact')) {
+        let str = location.hash;
+        let n = str.replace("_", "");
+        $('html, body').scrollTop(($(n).offset().top - 20 - $('.hdr').innerHeight()));
+    }
+
     if ($(window).width() > 768) {
         $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
     } else {
@@ -30,7 +36,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2000,
         touchMove: true,
         arrows: false,
@@ -75,6 +81,7 @@ $(document).ready(function () {
     });
 
 });
+
 
 function openTopPopup() {
     $.magnificPopup.open({
@@ -287,6 +294,7 @@ function sendTopForm() {
         console.log('dupa', res);
     });
 }
+
 
 function sendBottomForm() {
     let data = $('#bottom-form').serializeArray();
