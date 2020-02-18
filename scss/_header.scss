@@ -10,7 +10,7 @@
     background-color: white;
 
     .blue-button {
-      display: block;
+      display: none;
     }
   }
 
@@ -111,6 +111,14 @@
 @media (min-width: 768px) {
   .hdr {
     padding: 10px 30px;
+
+    &.projects {
+      background-color: white;
+
+      .blue-button {
+        display: block;
+      }
+    }
 
     &-logo {
       width: 80px;

@@ -4,6 +4,9 @@ body {
 
 section {
   margin-bottom: 50px;
+  &.adr {
+    padding-top: 50px;
+  }
 }
 
 .container {
@@ -18,7 +21,7 @@ section {
 }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
   color: #000000;
 }
 
@@ -68,7 +71,6 @@ ul {
 .half-width {
   width: 100%;
   position: relative;
-
 }
 
 .block-header {
@@ -104,7 +106,6 @@ ul {
   }
   .half-width {
     width: 50%;
-    height: 580px;
   }
 }
 
