@@ -17,7 +17,7 @@
       ul {
         li {
           a[href*="projects"] {
-            color: #23c1e3;
+            color: $main-blue;
           }
         }
       }
@@ -92,7 +92,7 @@
 
       li {
         &.active {
-          color: #23c1e3;
+          color: $main-blue;
         }
 
         a {
@@ -110,7 +110,7 @@
           &:hover,
           &:focus {
             cursor: pointer;
-            color: #23c1e3;
+            color: $main-blue;
           }
         }
       }

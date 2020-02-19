@@ -854,13 +854,13 @@ ul {
   color: white;
   border: 0;
   border-radius: 50px;
-  background-color: #2ec1e0;
+  background-color: #23c1e3;
   box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.32);
   transition: .3s; }
   .blue-button:hover, .blue-button:focus {
-    color: #2ec1e0;
+    color: #23c1e3;
     background-color: white;
-    box-shadow: 0 0 1px 1px #2ec1e0 !important; }
+    box-shadow: 0 0 1px 1px #23c1e3 !important; }
   .blue-button:hover {
     cursor: pointer; }
 
@@ -1133,7 +1133,7 @@ form {
         line-height: 1.3;
         font-size: 24px; }
         .fsc_wrapper-content h1 span {
-          color: #2ec1e0; }
+          color: #23c1e3; }
 
 .mfp-wrapper {
   text-align: center; }
@@ -1286,7 +1286,7 @@ form {
     font-size: 12px;
     text-transform: uppercase;
     text-align: center;
-    border: 2px solid #2ec1e0;
+    border: 2px solid #23c1e3;
     border-radius: 50px;
     z-index: 1; }
     .prj .tabs-captions .caption:hover {
@@ -1295,7 +1295,7 @@ form {
       margin-top: 10px; }
     .prj .tabs-captions .caption.active {
       color: white;
-      background-color: #2ec1e0;
+      background-color: #23c1e3;
       z-index: 2;
       box-shadow: none; }
 
@@ -1317,9 +1317,9 @@ form {
   .prj_item:not(:last-child) {
     margin-bottom: 50px; }
   .prj_item-link {
-    color: #2ec1e0; }
+    color: #23c1e3; }
     .prj_item-link:hover {
-      color: #2ec1e0;
+      color: #23c1e3;
       text-decoration: underline !important; }
   .prj_item-img {
     position: absolute;

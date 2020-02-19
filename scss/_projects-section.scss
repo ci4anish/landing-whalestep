@@ -36,7 +36,7 @@
         font-size: 12px;
         text-transform: uppercase;
         text-align: center;
-        border: 2px solid #2ec1e0;
+        border: 2px solid $main-blue;
         border-radius: 50px;
         z-index: 1;
 
@@ -50,7 +50,7 @@
 
         &.active {
           color: white;
-          background-color: #2ec1e0;
+          background-color: $main-blue;
           z-index: 2;
           box-shadow: none;
 
@@ -104,10 +104,10 @@
     }
 
     &-link {
-      color: #2ec1e0;
+      color: $main-blue;
 
       &:hover {
-        color: #2ec1e0;
+        color: $main-blue;
         text-decoration: underline !important;
       }
     }
