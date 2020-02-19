@@ -7,11 +7,10 @@
     padding: 75px 0 25px;
     min-height: 280px;
     background: url('/img/assets/projects-bg.png') no-repeat center;
-    //background-size: contain;
 
 
     .fsc_wrapper-content {
-      max-width: 600px;
+      max-width: 400px;
 
       h1 {
         font-size: 24px;
@@ -121,6 +120,8 @@
 
     &.projects {
       .fsc_wrapper-content {
+        max-width: 600px;
+
         h1 {
           font-size: 36px;
           margin-bottom: 30px;

@@ -12,6 +12,16 @@
     .blue-button {
       display: none;
     }
+
+    nav {
+      ul {
+        li {
+          a[href*="projects"] {
+            color: #23c1e3;
+          }
+        }
+      }
+    }
   }
 
   .blue-button {

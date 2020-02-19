@@ -6,11 +6,6 @@ $(document).ready(function () {
         $('html, body').scrollTop(($(n).offset().top - 20 - $('.hdr').innerHeight()));
     }
 
-    if ($(window).width() > 768) {
-        $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
-    } else {
-        $('.fsc_bg').attr('src', 'img/assets/bg-image-high.png');
-    }
 
     $('.hdr nav li').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active')
@@ -22,62 +17,22 @@ $(document).ready(function () {
         }, 1000);
     });
 
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= 50) {
-            $('.hdr').addClass('sticky');
-        } else {
-            $('.hdr').removeClass('sticky').addClass('sticky-revert');
-        }
-    });
-
-
-    $('.tech-stack-logos').slick({
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        touchMove: true,
-        arrows: false,
-        responsive: [
-
-            {
-                breakpoint: 1170,
-                settings: {
-                    slidesToShow: 5
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 560,
-                settings: {
-                    slidesToShow: 2
-                }
-            }
-        ]
-
-    });
-
-
     $('#openTopPopup, #openHdrPopup').on('click', function () {
         openTopPopup();
     });
+
     $('#openBtmPopup').on('click', function (e) {
         openBtmPopup();
         sendBottomForm();
         e.preventDefault();
         e.stopPropagation();
     });
+
     $('#hdrFormSend').on('click', function (e) {
         sendTopForm();
+        openBtmPopup();
         e.preventDefault();
-        e.stopPropagation();
+        e.stopPropagation()
     });
 
 });
@@ -100,7 +55,6 @@ function openBtmPopup() {
         type: 'inline'
     });
 }
-
 
 function initMap() {
 
@@ -272,7 +226,6 @@ function initMap() {
     });
     var marker = new google.maps.Marker({
 
-        // Определяем позицию маркера
         position: {lat: 49.827607, lng: 24.044427},
         map: map,
         animation: google.maps,
@@ -291,9 +244,10 @@ function sendTopForm() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body)
     }).then(res => {
-        console.log('dupa', res);
+        console.log(res);
     });
 }
+
 
 
 function sendBottomForm() {

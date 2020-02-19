@@ -1,18 +1,37 @@
 .tech-stack {
   .slick-list {
-    margin: 20px 0!important;
+    margin: 20px 0 !important;
   }
+
   &-logos {
     display: flex;
     div {
+      height: 108px;
+
       img {
-        margin: 0 auto;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
+
   .slick-initialized .slick-slide {
     display: flex;
-    height: 108px;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 108px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      max-width: 100px;
+      opacity: 1;
+      transition: 5s;
+    }
   }
 }
+
