@@ -27,7 +27,7 @@
                 </ul>
             </nav>
         </div>
-        <button class="blue-button" id="openHdrPopup">Get in touch</button>
+        <button class="blue-button" id="openHdrPopup" type="submit">Get in touch</button>
     </div>
 </header>
 <div class="first-screen fsc">
@@ -48,7 +48,7 @@
                 we will respond as soon as possible
             </div>
             <input name="full_name" type="text" placeholder="Your Full Name">
-            <input name="email" type="text" placeholder="Your Email">
+            <input name="email" type="email" placeholder="Your Email" required>
             <input id="hdrFormSend" type="submit" class="blue-button" value="Send">
             <img src="img/assets/team-photo-decor.png" alt="">
         </form>
@@ -159,48 +159,49 @@
             <div class="line"></div>
         </div>
     </div>
-   <div class="left-bg-lg">
-       <img class="lg-img" src="/img/left-decor.png" alt="">
-       <div class="container">
-           <div class="prj_item">
-               <div class="web-anim top left-bg half-width">
-                   <img class="prj_item-img" src="/img/left-decor-laptop.png" alt="">
-                   <img class="prj_item-img" src="/img/left-decor-left-anim.png" alt="">
-                   <img class="prj_item-img" src="/img/left-decor-right-anim.png" alt="">
-               </div>
-               <div class="half-width">
-                   <div class="prj_item-title">Hirescapes</div>
-                   <div class="prj_item-desc">
-                       <a class="prj_item-link" href="/projects#hirescapes">Find out more</a> about the creation of the platform, meant to digitalize contracts in the Hardscaping field.
-                   </div>
-                   <div class="prj_item-response">
-                       <p>
-                           The Whale Step team was a pleasure to work with.
-                       </p>
-                       <p>
-                           They were able to jump right into our project and help take the lead of the
-                           front end.
-                           Taras, the team lead, was great with communication and did proper research on
-                           given tasks.
-                       </p>
-                       <p>
-                           We would highly recommend Whale Step and will be working with them again on
-                           future projects.
-                       </p>
-                       <div class="user">
-                           <div class="user-img">
-                               <img src="./img/client-joe.jpg" alt="user-portrait">
-                           </div>
-                           <div class="user_desc">
-                               <div class="user_desc-name">Joseph Masciovecchio</div>
-                               <div class="user_desc-pos">CEO of Hirescapes</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+    <div class="left-bg-lg">
+        <img class="lg-img" src="/img/left-decor.png" alt="">
+        <div class="container">
+            <div class="prj_item">
+                <div class="web-anim top left-bg half-width">
+                    <img class="prj_item-img" src="/img/left-decor-laptop.png" alt="">
+                    <img class="prj_item-img" src="/img/left-decor-left-anim.png" alt="">
+                    <img class="prj_item-img" src="/img/left-decor-right-anim.png" alt="">
+                </div>
+                <div class="half-width">
+                    <div class="prj_item-title">Hirescapes</div>
+                    <div class="prj_item-desc">
+                        <a class="prj_item-link" href="/projects#hirescapes">Find out more</a> about the creation of the
+                        platform, meant to digitalize contracts in the Hardscaping field.
+                    </div>
+                    <div class="prj_item-response">
+                        <p>
+                            The Whale Step team was a pleasure to work with.
+                        </p>
+                        <p>
+                            They were able to jump right into our project and help take the lead of the
+                            front end.
+                            Taras, the team lead, was great with communication and did proper research on
+                            given tasks.
+                        </p>
+                        <p>
+                            We would highly recommend Whale Step and will be working with them again on
+                            future projects.
+                        </p>
+                        <div class="user">
+                            <div class="user-img">
+                                <img src="./img/client-joe.jpg" alt="user-portrait">
+                            </div>
+                            <div class="user_desc">
+                                <div class="user_desc-name">Joseph Masciovecchio</div>
+                                <div class="user_desc-pos">CEO of Hirescapes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="prj_item mobile-anim">
             <div class="half-width">
@@ -213,7 +214,8 @@
             <div class="half-width">
                 <div class="prj_item-title">Meditate</div>
                 <div class="prj_item-desc">
-                    More fun, less stress. Meditate is an application from yoga guru, that sells soundtracks and good mood.
+                    More fun, less stress. Meditate is an application from yoga guru, that sells soundtracks and good
+                    mood.
                     <a class="prj_item-link" href="/projects#meditate">Read more</a>.
                 </div>
                 <div class="prj_item-response">
@@ -265,7 +267,9 @@
             <div class="half-width">
                 <div class="prj_item-title">Weekdone</div>
                 <div class="prj_item-desc">
-                    Setting goals for organization and achieve them, have newer been easier. <a class="prj_item-link" href="/projects#weekdone">Explore</a> challenges we faced building OKR management platform.
+                    Setting goals for organization and achieve them, have newer been easier. <a class="prj_item-link"
+                                                                                                href="/projects#weekdone">Explore</a>
+                    challenges we faced building OKR management platform.
                 </div>
                 <div class="prj_item-response">
                     <p>
@@ -330,12 +334,13 @@
                             Leave your contact details and messages and we will respond as soon as possible
                         </div>
                         <div class="input-wrapper">
-                            <input name="full_name" type="text" placeholder="Your Full Name">
-                            <input name="email" type="text" placeholder="Your Email">
+                            <input id="name" name="full_name" type="text" placeholder="Your Full Name">
+                            <input id="email" name="email" type="email" placeholder="Your Email" required>
                         </div>
-                        <textarea name="description" id="" cols="30" rows="10" placeholder="Message..."></textarea>
+                        <textarea id="textarea" name="description" cols="30" rows="10"
+                                  placeholder="Message..."></textarea>
                         <div class="btn-wrapper">
-                            <button class="blue-button" id="openBtmPopup">Send</button>
+                            <button class="blue-button" type="submit">Send</button>
                         </div>
                         <img src="/img/assets/team-photo-decor.png" alt="">
                     </form>

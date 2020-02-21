@@ -23,6 +23,11 @@ section {
 a {
   text-decoration: none !important;
   color: #000000;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $main-blue;
+  }
 }
 
 ul {

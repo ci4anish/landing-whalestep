@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     if (window.location.href.includes('about') || window.location.href.includes('contact')) {
         let str = location.hash;
         let n = str.replace("_", "");
@@ -17,22 +16,25 @@ $(document).ready(function () {
         }, 1000);
     });
 
-    $('#openTopPopup, #openHdrPopup').on('click', function () {
-        openTopPopup();
-    });
-
-    $('#openBtmPopup').on('click', function (e) {
-        openBtmPopup();
+    $('#bottom-form').on('submit', function (e) {
         sendBottomForm();
+        openBtmPopup();
+        $(this).trigger('reset');
         e.preventDefault();
         e.stopPropagation();
     });
 
-    $('#hdrFormSend').on('click', function (e) {
+
+    $('#openHdrPopup, #openTopPopup').on('click', function (e) {
+        openTopPopup();
+    });
+
+    $('#top-form').on('submit', function (e) {
         sendTopForm();
         openBtmPopup();
+        $(this).trigger('reset');
         e.preventDefault();
-        e.stopPropagation()
+        e.stopPropagation();
     });
 
 });
@@ -55,6 +57,32 @@ function openBtmPopup() {
         type: 'inline'
     });
 }
+
+function sendTopForm() {
+    let data = $('#top-form').serializeArray();
+    let body = {};
+    data.forEach(item => body[item.name] = item.value);
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+    }).then(res => {
+    });
+}
+
+function sendBottomForm() {
+    let data = $('#bottom-form').serializeArray();
+    let body = {};
+    data.forEach(item => body[item.name] = item.value);
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+    }).then(res => {
+        console.log(res);
+    });
+}
+
 
 function initMap() {
 
@@ -232,33 +260,5 @@ function initMap() {
 
         title: 'Whale Step',
         icon: '../img/location-marker.png'
-    });
-}
-
-function sendTopForm() {
-    let data = $('#top-form').serializeArray();
-    let body = {};
-    data.forEach(item => body[item.name] = item.value);
-    fetch('/send-email', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(body)
-    }).then(res => {
-        console.log(res);
-    });
-}
-
-
-
-function sendBottomForm() {
-    let data = $('#bottom-form').serializeArray();
-    let body = {};
-    data.forEach(item => body[item.name] = item.value);
-    fetch('/send-email', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(body)
-    }).then(res => {
-        console.log(res);
     });
 }

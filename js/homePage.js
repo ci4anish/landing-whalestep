@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    window.addEventListener('scroll', (e) => {
+        const windowYOffset = window.pageYOffset + 21 + $('.hdr').innerHeight();
+        const sections = ['.about', '.projects', '.address'];
+
+        sections.forEach((section, index, arr) => {
+            const currentSectionTop = $(section).offset().top;
+            const nextSectionTop = index === arr.length - 1 ? Infinity : $(arr[index + 1]).offset().top;
+            if (windowYOffset > currentSectionTop && windowYOffset < nextSectionTop) {
+                $(`nav ul li:nth-child(${index + 1})`).addClass('active');
+            } else {
+                $(`nav ul li:nth-child(${index + 1})`).removeClass('active');
+            }
+        })
+    });
 
     if ($(window).width() > 768) {
         $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
@@ -8,9 +22,10 @@ $(document).ready(function () {
 
 
     $('a[href^="#"]').on('click', function () {
+        console.log($($(this).attr('href')).offset());
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 20 - $('.hdr').innerHeight()
-        }, 1000);
+        }, 1);
     });
 
     $(window).scroll(function () {

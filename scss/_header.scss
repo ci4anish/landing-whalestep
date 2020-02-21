@@ -19,6 +19,12 @@
           a[href*="projects"] {
             color: $main-blue;
           }
+
+          &:hover {
+            a {
+              color: $main-blue;
+            }
+          }
         }
       }
     }
@@ -91,9 +97,6 @@
       display: flex;
 
       li {
-        &.active {
-          color: $main-blue;
-        }
 
         a {
           flex-grow: 1;
@@ -106,12 +109,13 @@
           margin-left: 20px;
           transition: .2s;
 
+        }
 
-          &:hover,
-          &:focus {
-            cursor: pointer;
+        &.active {
+          a {
             color: $main-blue;
           }
+
         }
       }
     }

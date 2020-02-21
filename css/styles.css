@@ -831,6 +831,9 @@ section {
 a {
   text-decoration: none !important;
   color: #000000; }
+  a:hover, a:focus {
+    cursor: pointer;
+    color: #23c1e3; }
 
 ul {
   padding: 0;
@@ -1017,6 +1020,8 @@ form {
       display: none; }
     .hdr.projects nav ul li a[href*="projects"] {
       color: #23c1e3; }
+    .hdr.projects nav ul li:hover a {
+      color: #23c1e3; }
   .hdr .blue-button {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.32);
     display: none; }
@@ -1057,8 +1062,6 @@ form {
       width: 100%; }
   .hdr nav ul {
     display: flex; }
-    .hdr nav ul li.active {
-      color: #23c1e3; }
     .hdr nav ul li a {
       flex-grow: 1;
       display: flex;
@@ -1069,9 +1072,8 @@ form {
       text-transform: uppercase;
       margin-left: 20px;
       transition: .2s; }
-      .hdr nav ul li a:hover, .hdr nav ul li a:focus {
-        cursor: pointer;
-        color: #23c1e3; }
+    .hdr nav ul li.active a {
+      color: #23c1e3; }
 
 @media (min-width: 768px) {
   .hdr {
@@ -1319,7 +1321,6 @@ form {
   .prj_item-link {
     color: #23c1e3; }
     .prj_item-link:hover {
-      color: #23c1e3;
       text-decoration: underline !important; }
   .prj_item-img {
     position: absolute;
@@ -1642,7 +1643,7 @@ form {
   .prj .tabs-content #mobile .prj_item:first-child img {
     left: -110px; }
   .prj .tabs-content #mobile .prj_item:nth-child(2) img {
-    left: 50px; }
+    left: 130px; }
   .prj .tabs-content #mobile .prj_item:nth-child(3) img {
     left: -100px; } }
 
