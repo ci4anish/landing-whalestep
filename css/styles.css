@@ -1236,6 +1236,7 @@ form {
     width: 250px; } }
 
 .tech-stack .slick-list {
+  width: 100%;
   margin: 20px 0 !important; }
 
 .tech-stack-logos {

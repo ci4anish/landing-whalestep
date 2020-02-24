@@ -29,7 +29,7 @@ app.listen(process.env.port || port);
 console.log(`Running at Port ${port}`);
 
 router.post('/send-email', async function (req, res) {
-    const mainEmail = 'taras.pohoretskyi.whalestep@gmail.com';
+    const mainEmail = 'ci4anish@gmail.com';
 
     let data = req.body;
     const transporter = nodeMailer.createTransport({
