@@ -47,7 +47,7 @@ router.post('/send-email', async function (req, res) {
     let mailOptions = {
         from: data.full_name + ' ' + data.email, // sender address
         to: mainEmail, // list of receivers
-        subject: req.body.subject || 'Subject', // Subject line
+        subject: data.email || 'Subject', // Subject line
         text: req.body.description || 'Text', // plain text body
         html: `<b>${data.description}</b>` // html body
 
