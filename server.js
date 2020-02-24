@@ -22,11 +22,6 @@ router.get('/',function(req,res){
 router.get('/projects',function(req,res) {
     res.sendFile(path.join(__dirname+'/projects.html'));
 });
-// router.get('/about',function(req,res){
-//     res.redirect('');
-// });
-
-
 
 app.use('/', router);
 app.listen(process.env.port || port);
@@ -34,7 +29,7 @@ app.listen(process.env.port || port);
 console.log(`Running at Port ${port}`);
 
 router.post('/send-email', async function (req, res) {
-    const mainEmail = 'ci4anish@gmail.com';
+    const mainEmail = 'taras.pohoretskyi.whalestep@gmail.com';
 
     let data = req.body;
     const transporter = nodeMailer.createTransport({
