@@ -1396,29 +1396,31 @@ form {
     top: 35%; }
   to {
     top: 15%; } }
-  .prj_item.mobile-anim .prj_item-img:first-child {
-    z-index: 1;
-    right: 0; }
-  .prj_item.mobile-anim .prj_item-img:not(:first-child) {
-    max-width: 120px; }
-  .prj_item.mobile-anim .prj_item-img:nth-child(2) {
-    z-index: 10;
-    top: 12%;
-    right: 175px;
-    animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-phone-anim; }
-  .prj_item.mobile-anim .prj_item-img:nth-child(3) {
-    z-index: 7;
-    top: 0;
-    right: 64px; }
-  .prj_item.mobile-anim .prj_item-img:nth-child(4) {
-    z-index: 5;
-    top: 24%;
-    right: 20px;
-    animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate right-phone-anim; }
-  .prj_item.mobile-anim .prj_item-img:nth-child(5) {
-    z-index: 7;
-    top: 48%;
-    right: 120px; }
+  .prj_item.mobile-anim {
+    padding-top: 50px; }
+    .prj_item.mobile-anim .prj_item-img:first-child {
+      z-index: 1;
+      right: 0; }
+    .prj_item.mobile-anim .prj_item-img:not(:first-child) {
+      max-width: 120px; }
+    .prj_item.mobile-anim .prj_item-img:nth-child(2) {
+      z-index: 10;
+      top: 12%;
+      right: 175px;
+      animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-phone-anim; }
+    .prj_item.mobile-anim .prj_item-img:nth-child(3) {
+      z-index: 7;
+      top: 0;
+      right: 64px; }
+    .prj_item.mobile-anim .prj_item-img:nth-child(4) {
+      z-index: 5;
+      top: 24%;
+      right: 20px;
+      animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate right-phone-anim; }
+    .prj_item.mobile-anim .prj_item-img:nth-child(5) {
+      z-index: 7;
+      top: 48%;
+      right: 120px; }
 
 @keyframes left-phone-anim {
   from {
@@ -1564,7 +1566,8 @@ form {
     .prj_item-img {
       max-width: 550px; }
     .prj_item.mobile-anim {
-      flex-direction: row-reverse; }
+      flex-direction: row-reverse;
+      padding-top: 0; }
       .prj_item.mobile-anim .prj_item-img:not(:first-child) {
         max-width: none; }
       .prj_item.mobile-anim .prj_item-img:first-child {

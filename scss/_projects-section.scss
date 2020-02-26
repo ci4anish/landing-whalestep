@@ -107,7 +107,7 @@
       color: $main-blue;
 
       &:hover {
-        text-decoration: underline!important;
+        text-decoration: underline !important;
       }
     }
 
@@ -239,6 +239,8 @@
 
 
     &.mobile-anim {
+      padding-top: 50px;
+
       .prj_item-img {
         &:first-child {
           z-index: 1;
@@ -580,6 +582,7 @@
 
       &.mobile-anim {
         flex-direction: row-reverse;
+        padding-top: 0;
 
         .prj_item-img {
 

@@ -19,14 +19,24 @@ $(document).ready(function () {
 });
 
 function toggleTabContent(projectId) {
+    let projectIdTab;
 
-    let projectIdTab = $(projectId).parent().attr('id');
+    if (projectId === "#hirescapes") {
+        projectIdTab = $(projectId).parent().attr('id');
+    } else {
+        projectIdTab = $(projectId).parent().parent().attr('id');
+    }
+
     if (projectIdTab === $('.caption.active').attr('href')) {
         $('html, body').animate({
             scrollTop: $(projectId).offset().top - 20 - $('.hdr').innerHeight()
         });
     } else {
+        $('.caption.active').removeClass('active').siblings().addClass('active');
         $(`#${projectIdTab}`).addClass('active').siblings().removeClass('active');
+        $('html, body').animate({
+            scrollTop: $(projectId).offset().top - 20 - $('.hdr').innerHeight()
+        });
     }
 
 }
