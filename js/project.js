@@ -44,7 +44,7 @@ function toggleTabContent(projectId) {
 function scrollRedirect(link) {
     link = link.toLowerCase();
     if (link.includes('about') || link.includes('contact')) {
-        window.location.href = `http://localhost:8008/#${link}_`; // todo: change link
+        window.location.href = `https://whalestep.com/#${link}_`; // todo: change link
     }
 }
 

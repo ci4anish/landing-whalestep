@@ -22,7 +22,6 @@ $(document).ready(function () {
 
 
     $('a[href^="#"]').on('click', function () {
-        console.log($($(this).attr('href')).offset());
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 20 - $('.hdr').innerHeight()
         }, 1);

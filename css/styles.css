@@ -1199,7 +1199,8 @@ form {
       align-items: center; }
       .abt_team-item .title {
         text-align: center;
-        margin: 15px 0; }
+        margin: 15px 0;
+        min-height: 68px; }
         .abt_team-item .title span {
           font-weight: 700;
           margin-right: 10px; }
@@ -1236,6 +1237,7 @@ form {
     width: 250px; } }
 
 .tech-stack .slick-list {
+  width: 100%;
   margin: 20px 0 !important; }
 
 .tech-stack-logos {
