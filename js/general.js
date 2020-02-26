@@ -254,7 +254,7 @@ function initMap() {
     });
     var marker = new google.maps.Marker({
 
-        position: {lat: 49.827607, lng: 24.044427},
+        position: {lat: 49.816675, lng: 24.061574},
         map: map,
         animation: google.maps,
 
