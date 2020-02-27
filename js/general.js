@@ -2,7 +2,7 @@ $(document).ready(function () {
     if (window.location.href.includes('about') || window.location.href.includes('contact')) {
         let str = location.hash;
         let n = str.replace("_", "");
-        scrollToSection(n);
+        $('html, body').scrollTop($(n).offset().top - 20 - $('.hdr').innerHeight());
     }
 
 
@@ -38,7 +38,8 @@ $(document).ready(function () {
 });
 
 console.log(window.location);
-let url = 'https://whalestep.com';
+// let url = 'https://whalestep.com';
+let url = 'http://localhost:8008';
 
 function scrollToSection(sectionId) {
     $('html, body').animate({
@@ -260,7 +261,7 @@ function initMap() {
     });
     var marker = new google.maps.Marker({
 
-        position: {lat: 49.816675, lng: 24.061574},
+        position: {lat: 49.823872, lng: 24.052701},
         map: map,
         animation: google.maps,
 
