@@ -1,8 +1,9 @@
 $(document).ready(function () {
     let projectId = window.location.hash;
 
-    toggleTabContent(projectId);
-
+    if (projectId) {
+        toggleTabContent(projectId);
+    }
 
     $('.caption').click(function (e) {
         e.preventDefault();
@@ -28,15 +29,11 @@ function toggleTabContent(projectId) {
     }
 
     if (projectIdTab === $('.caption.active').attr('href')) {
-        $('html, body').animate({
-            scrollTop: $(projectId).offset().top - 20 - $('.hdr').innerHeight()
-        });
+        scrollToSection(projectId);
     } else {
         $('.caption.active').removeClass('active').siblings().addClass('active');
         $(`#${projectIdTab}`).addClass('active').siblings().removeClass('active');
-        $('html, body').animate({
-            scrollTop: $(projectId).offset().top - 20 - $('.hdr').innerHeight()
-        });
+        scrollToSection(projectId);
     }
 
 }
@@ -44,7 +41,7 @@ function toggleTabContent(projectId) {
 function scrollRedirect(link) {
     link = link.toLowerCase();
     if (link.includes('about') || link.includes('contact')) {
-        window.location.href = `https://whalestep.com/#${link}_`;
+        window.location.href = `${url}/#${link}_`;
     }
 }
 

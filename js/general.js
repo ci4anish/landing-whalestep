@@ -2,7 +2,7 @@ $(document).ready(function () {
     if (window.location.href.includes('about') || window.location.href.includes('contact')) {
         let str = location.hash;
         let n = str.replace("_", "");
-        $('html, body').scrollTop(($(n).offset().top - 20 - $('.hdr').innerHeight()));
+        scrollToSection(n);
     }
 
 
@@ -11,9 +11,7 @@ $(document).ready(function () {
     });
 
     $('a[href^="#"]').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 20 - $('.hdr').innerHeight()
-        }, 1000);
+        scrollToSection($(this).attr('href'));
     });
 
     $('#bottom-form').on('submit', function (e) {
@@ -39,6 +37,14 @@ $(document).ready(function () {
 
 });
 
+console.log(window.location);
+let url = 'https://whalestep.com';
+
+function scrollToSection(sectionId) {
+    $('html, body').animate({
+        scrollTop: $(sectionId).offset().top - 20 - $('.hdr').innerHeight()
+    }, 1000);
+}
 
 function openTopPopup() {
     $.magnificPopup.open({
