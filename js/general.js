@@ -37,9 +37,7 @@ $(document).ready(function () {
 
 });
 
-console.log(window.location);
-// let url = 'https://whalestep.com';
-let url = 'http://localhost:8008';
+let url = 'https://whalestep.com';
 
 function scrollToSection(sectionId) {
     $('html, body').animate({
