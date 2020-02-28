@@ -14,6 +14,10 @@ $(document).ready(function () {
         })
     });
 
+    if (window.pageYOffset >= 50) {
+        $('.hdr').addClass('sticky');
+    }
+
     if ($(window).width() > 768) {
         $('.fsc_bg').attr('src', 'img/assets/bg-image.png');
     } else {
