@@ -256,6 +256,7 @@
           top: 12%;
           right: 175px;
           animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-phone-anim;
+          max-width: 130px;
         }
 
         &:nth-child(3) {
@@ -266,7 +267,7 @@
 
         &:nth-child(4) {
           z-index: 5;
-          top: 24%;
+          top: 30%;
           right: 20px;
           animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate right-phone-anim;
         }
@@ -288,10 +289,10 @@
 
         @keyframes right-phone-anim {
           from {
-            right: 25px;
+            right: 10px;
           }
           to {
-            right: 40px;
+            right: 25px;
           }
         }
       }
@@ -465,8 +466,8 @@
           }
 
           &:nth-child(4) {
-            top: 20%;
             right: 0;
+            max-width: 180px;
           }
 
           &:nth-child(5) {
@@ -484,10 +485,10 @@
 
           @keyframes right-phone-anim {
             from {
-              right: 20px;
+              right: 15px;
             }
             to {
-              right: 45px;
+              right: 40px;
             }
           }
         }
@@ -606,7 +607,6 @@
 
           &:nth-child(4) {
             right: 60px;
-            top: 24%;
           }
 
           &:nth-child(5) {
@@ -625,10 +625,10 @@
 
           @keyframes right-phone-anim {
             from {
-              right: 0;
+              right: -5%;
             }
             to {
-              right: 35px;
+              right: 2%;
             }
           }
         }

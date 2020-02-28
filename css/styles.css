@@ -1409,14 +1409,15 @@ form {
       z-index: 10;
       top: 12%;
       right: 175px;
-      animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-phone-anim; }
+      animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate left-phone-anim;
+      max-width: 130px; }
     .prj_item.mobile-anim .prj_item-img:nth-child(3) {
       z-index: 7;
       top: 0;
       right: 64px; }
     .prj_item.mobile-anim .prj_item-img:nth-child(4) {
       z-index: 5;
-      top: 24%;
+      top: 30%;
       right: 20px;
       animation: 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate right-phone-anim; }
     .prj_item.mobile-anim .prj_item-img:nth-child(5) {
@@ -1432,9 +1433,9 @@ form {
 
 @keyframes right-phone-anim {
   from {
-    right: 25px; }
+    right: 10px; }
   to {
-    right: 40px; } }
+    right: 25px; } }
   .prj_item-title {
     margin-bottom: 18px;
     font-weight: 700;
@@ -1516,8 +1517,8 @@ form {
     top: -12%;
     right: 88px; }
   .prj_item.mobile-anim .prj_item-img:nth-child(4) {
-    top: 20%;
-    right: 0; }
+    right: 0;
+    max-width: 180px; }
   .prj_item.mobile-anim .prj_item-img:nth-child(5) {
     right: 180px; }
   @keyframes left-phone-anim {
@@ -1527,9 +1528,9 @@ form {
       right: 230px; } }
   @keyframes right-phone-anim {
     from {
-      right: 20px; }
+      right: 15px; }
     to {
-      right: 45px; } } }
+      right: 40px; } } }
 
 @media (min-width: 1200px) {
   .prj .left-bg,
@@ -1581,8 +1582,7 @@ form {
         right: 80px;
         top: 0; }
       .prj_item.mobile-anim .prj_item-img:nth-child(4) {
-        right: 60px;
-        top: 24%; }
+        right: 60px; }
       .prj_item.mobile-anim .prj_item-img:nth-child(5) {
         right: 200px;
         top: 53%; }
@@ -1593,9 +1593,9 @@ form {
       right: 255px; } }
   @keyframes right-phone-anim {
     from {
-      right: 0; }
+      right: -5%; }
     to {
-      right: 35px; } }
+      right: 2%; } }
     .prj_item.web-anim.top img:first-child {
       max-width: 450px; }
   @keyframes btm-left-anim {
